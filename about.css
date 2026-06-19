@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f7f4;
+  color: #2b3a30;
+}
+
+/* ==========================================================================
+    1.HEADER STYLES
+   ========================================================================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background-color: #2e7d32 !important; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #ffffff !important; 
+  letter-spacing: 0.5px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff !important; 
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: none !important;
+}
+
+/* একটিভ পেজ শেড ইফেক্ট */
+nav a:hover, 
+nav a.active {
+  background-color: transparent !important;
+  color: #ffffff !important; 
+}
+
+/* ==========================================================================
+   2.HERO SECTION STYLES
+   ========================================================================== */
+.hero {
+  text-align: center;
+  padding: 140px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+              url('https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=1200') 
+              no-repeat center center/cover;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #f1f8f2;
+}
+
+/* ==========================================================================
+    3. CONTAINER AND GRID LAYOUTS (CATEGORIES AND PRODUCTS)
+   ========================================================================== */
+.about-container {
+  padding: 40px 8% 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-heading {
+  text-align: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+/* Our Story */
+.about-heading h2 {
+  font-size: 28px;
+  color: #2b3a30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.about-heading h2::before,
+.about-heading h2::after {
+  content: "";
+  flex: 1;
+  max-width: 150px;
+  height: 1px;
+  background-color: #bcaaa4;
+}
+
+.story-text {
+  max-width: 850px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.story-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #4e5d51;
+}
+
+/* 3-Card Grid */
+.about-card-grid {
+  display: flex;
+  gap: 25px;
+}
+
+.about-card {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #e0eae1;
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.about-card-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.about-card h3 {
+  font-size: 18px;
+  color: #2b3a30;
+  margin-bottom: 12px;
+}
+
+.card-divider {
+  border: 0;
+  height: 1px;
+  background-color: #e0e0e0;
+  width: 80%;
+  margin: 0 auto 15px;
+}
+
+.about-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ==========================================================================
+   4(Bringing Nature into Your Home)
+   ========================================================================== */
+.nature-banner {
+  background: url('https://images.unsplash.com/photo-1512428813833-df44d75909dd?q=80&w=1200') 
+              no-repeat center center/cover;
+  border-radius: 6px;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.85); /* স্ক্রিনশটের মতো হালকা হোয়াইটিশ ওভারলে */
+}
+
+.nature-banner-content h2 {
+  font-size: 26px;
+  color: #2b3a30;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.nature-divider {
+  border: 0;
+  height: 1px;
+  background-color: #bcaaa4;
+  width: 40%;
+  margin: 0 auto 12px;
+}
+
+.nature-banner-content p {
+  font-size: 15px;
+  color: #4e5d51;
+}
+
+/* ==========================================================================
+   5. FOOTER STYLES (MISMATCHED WITH HOME PAGE)
+   ========================================================================== */
+.beautiful-footer {
+  background-color: #2e7d32;
+  color: white;
+  padding: 50px 8% 20px;
+  margin-top: 40px;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.brand-info h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.brand-info p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.links h4, .social h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.links ul {
+  list-style: none;
+}
+
+.links ul li {
+  margin-bottom: 8px;
+}
+
+.links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.links ul li a:hover {
+  opacity: 1;
+  padding-left: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 13px;
+  opacity: 0.7;
+}

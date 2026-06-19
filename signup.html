@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenNest - Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🌿 GreenNest</div>
+    <nav>
+      <ul>
+        <li><a href="home.html" class="nav-item">Home</a></li>
+        <li><a href="about.html" class="nav-item">About Us</a></li>
+        <li><a href="categories.html" class="nav-item">Categories</a></li>
+        <li><a href="cart.html" class="nav-item">Cart</a></li>
+        <li><a href="login.html" class="nav-item">Login</a></li>
+        <li><a href="signup.html" class="nav-item active">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Signup Popup Container and Form Section -->
+  <main class="signup-bg-wrapper">
+    <div class="signup-popup-card">
+      
+      <!-- Header Section -->
+      <div class="popup-header">
+        <h2>Create Your GreenNest Account</h2>
+        <p>Sign up to shop for beautiful indoor plants and get care tips.</p>
+      </div>
+
+      <!-- Signup Form -->
+      <form class="signup-form" action="#" method="POST">
+        
+        <!-- Full Name Input -->
+        <div class="input-group-label">
+          <i class="far fa-user"></i> Full Name
+        </div>
+        <div class="input-field-wrapper">
+          <i class="fas fa-lock icon-placeholder"></i>
+          <input type="text" placeholder="Full Name" required>
+        </div>
+
+        <!-- Email Input -->
+        <div class="input-group-label">
+          <i class="far fa-envelope"></i> Email Address
+        </div>
+        <div class="input-field-wrapper">
+          <i class="far fa-envelope icon-placeholder"></i>
+          <input type="email" placeholder="Email Address" required>
+        </div>
+
+        <!-- Password Input -->
+        <div class="input-group-label">
+          <i class="far fa-plus-square"></i> Password
+        </div>
+        <div class="input-field-wrapper">
+          <i class="fas fa-lock icon-placeholder"></i>
+          <input type="password" placeholder="Password" required>
+        </div>
+        <span class="input-hint">Must be at least 8 characters.</span>
+
+        <!-- Signup Submit Button -->
+        <button type="submit" class="btn-signup-submit">Sign Up</button>
+      </form>
+
+      <!-- Terms and Login Link -->
+      <div class="popup-footer">
+        <p class="terms-text">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+        <p class="login-redirect">Already have an account? <a href="login.html">Log In</a></p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Bar ) -->
+  <footer class="beautiful-footer">
+    <div class="footer-wrap">
+      <div class="footer-section brand-info">
+        <h3>🌿 GreenNest</h3>
+        <p>Growing a Greener Future since 2026.</p>
+      </div>
+      <div class="footer-section links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="categories.html">Shop Categories</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon insta"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 GreenNest. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

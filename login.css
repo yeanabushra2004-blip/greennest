@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f7f4;
+  color: #2b3a30;
+}
+
+/* ========================================================================
+  1.HEADER STYLES 
+   ========================================================================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background-color: #2e7d32 !important; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #ffffff !important; 
+  letter-spacing: 0.5px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff !important; 
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover, 
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important; 
+}
+
+/* ==========================================================================
+   2. Login Page Background and Layout Styles
+   ========================================================================== */
+.login-bg-wrapper {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(rgba(244, 247, 244, 0.45), rgba(244, 247, 244, 0.45)), 
+              url('https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=1200') 
+              no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+/* ==========================================================================
+   3. Login Popup Card Styles
+   ========================================================================== */
+.login-popup-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  padding: 45px 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.popup-header h2 {
+  font-size: 32px;
+  color: #2e5a36; 
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.popup-header p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 35px;
+}
+
+/* Login Form and Input Styles */
+.login-form {
+  text-align: left;
+}
+
+.input-group-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.input-field-wrapper {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-field-wrapper input {
+  width: 100%;
+  padding: 14px 15px 14px 45px;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.input-field-wrapper input:focus {
+  border-color: #2e7d32;
+  background-color: #ffffff;
+}
+
+.icon-placeholder {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #718096;
+  font-size: 15px;
+}
+
+/* Forgot Password Link */
+.forgot-password-wrap {
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.forgot-link {
+  color: #2e5a36;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Log In Submit Button */
+.btn-login-submit {
+  width: 100%;
+  background-color: #2d6a39; 
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-login-submit:hover {
+  background-color: #1b4324;
+}
+
+/* ফুটার লিংক */
+.popup-footer {
+  margin-top: 25px;
+}
+
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background-color: #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.signup-redirect {
+  font-size: 14px;
+  color: #444;
+}
+
+.signup-redirect a {
+  color: #2d6a39;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   4.FOOTER STYLES 
+   ========================================================================== */
+.beautiful-footer {
+  background-color: #2e7d32;
+  color: white;
+  padding: 50px 8% 20px;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.brand-info h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.brand-info p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.links h4, .social h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.links ul {
+  list-style: none;
+}
+
+.links ul li {
+  margin-bottom: 8px;
+}
+
+.links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.links ul li a:hover {
+  opacity: 1;
+  padding-left: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 13px;
+  opacity: 0.7;
+}

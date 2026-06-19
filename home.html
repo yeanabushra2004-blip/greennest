@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenNest - Home</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER SECTION -->
+  <header>
+    <div class="logo">🌿 GreenNest</div>
+    <nav>
+      <ul>
+        <li><a href="home.html" class="nav-item">Home</a></li>
+        <li><a href="about.html" class="nav-item">About Us</a></li>
+        <li><a href="categories.html" class="nav-item">Categories</a></li>
+        <li><a href="cart.html" class="nav-item">Cart</a></li>
+        <li><a href="login.html" class="nav-item">Login</a></li>
+        <li><a href="signup.html" class="nav-item">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to GreenNest</h1>
+      <p>Your one-stop shop for beautiful indoor plants</p>
+      <button class="btn-hero-shop" onclick="location.href='categories.html'">Shop Now</button>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features">
+    <div class="feature-item">
+      <div class="feature-icon">🌿</div>
+      <div class="feature-text">
+        <h3>Wide Selection</h3>
+        <p>Variety of plants for every space</p>
+      </div>
+    </div>
+    <div class="feature-divider"></div>
+    <div class="feature-item">
+      <div class="feature-icon">🛒</div>
+      <div class="feature-text">
+        <h3>Easy Shopping</h3>
+        <p>Simple & secure checkout</p>
+      </div>
+    </div>
+    <div class="feature-divider"></div>
+    <div class="feature-item">
+      <div class="feature-icon">💚</div>
+      <div class="feature-text">
+        <h3>Plant Care Tips</h3>
+        <p>Guides to keep your plants healthy</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY GRID SECTION -->
+  <section class="main-container">
+    <div class="section-heading">
+      <h2>Shop by Category</h2>
+    </div>
+    <div class="category-grid">
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&q=80&w=500" alt="Indoor Plants">
+        <div class="card-details">
+          <h3>Indoor Plants</h3>
+          <button class="btn-action-view" onclick="location.href='categories.html'">View Plants</button>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1592150621744-aca64f48394a?q=80&w=500" alt="Air Purifying Plants">
+        <div class="card-details">
+          <h3>Air Purifying</h3>
+          <button class="btn-action-view" onclick="location.href='categories.html'">View Plants</button>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?auto=format&fit=crop&q=80&w=500" alt="Decorative Plants">
+        <div class="card-details">
+          <h3>Decorative</h3>
+          <button class="btn-action-view" onclick="location.href='categories.html'">View Plants</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PLANTS GRID SECTION -->
+  <section class="main-container" style="padding-top: 0; padding-bottom: 60px;">
+    <div class="section-heading">
+      <h2>Featured Plants</h2>
+    </div>
+    <div class="plant-grid">
+      <div class="plant-item">
+        <img src="https://m.media-amazon.com/images/I/51yVNDa9tDL._AC_UF1000,1000_QL80_.jpg" alt="Peace Lily">
+        <div class="plant-meta-info">
+          <h3>Peace Lily</h3>
+          <div class="price-row">
+            <span class="plant-code">BL15</span>
+            <span class="plant-price">$15</span>
+          </div>
+          <button class="btn-add-cart" onclick="alert('Added to Cart!')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="plant-item">
+        <img src="https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&q=80&w=400" alt="Snake Plant">
+        <div class="plant-meta-info">
+          <h3>Snake Plant</h3>
+          <div class="price-row">
+            <span class="plant-code">BLEF</span>
+            <span class="plant-price">$20</span>
+          </div>
+          <button class="btn-add-cart" onclick="alert('Added to Cart!')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="plant-item">
+        <img src="https://www.palasa.co.in/cdn/shop/articles/IMG_20220226_173034_1.jpg?v=1694161186" alt="Fiddle Leaf Fig">
+        <div class="plant-meta-info">
+          <h3>Fiddle Leaf Fig</h3>
+          <div class="price-row">
+            <span class="plant-code">BLEF</span>
+            <span class="plant-price">$25</span>
+          </div>
+          <button class="btn-add-cart" onclick="alert('Added to Cart!')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="plant-item">
+        <img src="https://media.istockphoto.com/id/1056600248/photo/house-indoor-plants-collection-succulent-and-cactus-in-different-pots-on-white-background.jpg?s=612x612&w=0&k=20&c=VaPeEhKGPSihTmgsZXSv5z_k5s6kIe59V3zrNf8bIYQ=" alt="Succulent Set">
+        <div class="plant-meta-info">
+          <h3>Succulent Set</h3>
+          <div class="price-row">
+            <span class="plant-code">BLEF</span>
+            <span class="plant-price">$30</span>
+          </div>
+          <button class="btn-add-cart" onclick="alert('Added to Cart!')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer class="beautiful-footer">
+    <div class="footer-wrap">
+      <div class="footer-section brand-info">
+        <h3>🌿 GreenNest</h3>
+        <p>Growing a Greener Future since 2026.</p>
+      </div>
+      <div class="footer-section links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="categories.html">Shop Categories</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon insta"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 GreenNest. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
