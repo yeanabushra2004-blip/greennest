@@ -1,0 +1,28 @@
+{
+  "plants": [
+    {
+      "name": "Peace Lily",
+      "code": "BL15",
+      "price": "$15",
+      "image": "https://m.media-amazon.com/images/I/51yVNDa9tDL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "name": "Snake Plant",
+      "code": "SP20",
+      "price": "$20",
+      "image": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&q=80&w=400"
+    },
+    {
+      "name": "Fiddle Leaf Fig",
+      "code": "FLF25",
+      "price": "$25",
+      "image": "https://www.palasa.co.in/cdn/shop/articles/IMG_20220226_173034_1.jpg?v=1694161186"
+    },
+    {
+      "name": "Succulent Set",
+      "code": "SS30",
+      "price": "$30",
+      "image": "https://media.istockphoto.com/id/1056600248/photo/house-indoor-plants-collection-succulent-and-cactus-in-different-pots-on-white-background.jpg?s=612x612&w=0&k=20&c=VaPeEhKGPSihTmgsZXSv5z_k5s6kIe59V3zrNf8bIYQ="
+    }
+  ]
+}
