@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenNest - Welcome Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">🌿 GreenNest</div>
+    <nav>
+      <ul>
+        <li><a href="home.html" class="nav-item">Home</a></li>
+        <li><a href="about.html" class="nav-item">About Us</a></li>
+        <li><a href="categories.html" class="nav-item">Categories</a></li>
+        <li><a href="cart.html" class="nav-item">Cart</a></li>
+        <li><a href="login.html" class="nav-item">Login</a></li>
+        <li><a href="signup.html" class="nav-item">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="dashboard-bg-wrapper">
+    <div class="main-dashboard-card">
+      
+      <aside class="gn-sidebar">
+        <div class="profile-box">
+          <div class="avatar-wrapper">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=400" alt="New User" class="user-photo">
+          </div>
+          <h3 class="user-name">Welcome, Explorer!</h3>
+          <p class="user-email">newuser@example.com</p>
+        </div>
+        
+        <nav class="sidebar-nav">
+          <ul class="nav-vertical-stack">
+            <li class="menu-item active" onclick="switchTab('dashboard', this)">
+              <a href="#dashboard"><i class="fas fa-th-large"></i> Dashboard</a>
+            </li>
+            <li class="menu-item" onclick="switchTab('orders', this)">
+              <a href="#orders"><i class="fas fa-shopping-bag"></i> My Orders</a>
+            </li>
+            <li class="menu-item" onclick="switchTab('wishlist', this)">
+              <a href="#wishlist"><i class="fas fa-heart"></i> Wishlist</a>
+            </li>
+            <li class="menu-item" onclick="switchTab('plants', this)">
+              <a href="#plants"><i class="fas fa-seedling"></i> My Plants</a>
+            </li>
+            <li class="menu-item" onclick="switchTab('settings', this)">
+              <a href="#settings"><i class="fas fa-user-cog"></i> Account Settings</a>
+            </li>
+            <li class="menu-item">
+              <a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="gn-content">
+        
+        <div id="tab-dashboard" class="tab-content active">
+          <div class="welcome-heading">
+            <h1>Welcome to the GreenNest Family! 🎉</h1>
+            <p>Your account is successfully created. Let's start your green journey!</p>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-box brown-box">
+              <div class="stat-img"><i class="fas fa-box-open"></i></div>
+              <div class="stat-data">
+                <span class="label">Orders Pending</span>
+                <span class="value">0</span>
+              </div>
+            </div>
+            <div class="stat-box green-box">
+              <div class="stat-img"><i class="fas fa-leaf"></i></div>
+              <div class="stat-data">
+                <span class="label">Plants Owned</span>
+                <span class="value">0</span>
+              </div>
+            </div>
+            <div class="stat-box red-box">
+              <div class="stat-img"><i class="fas fa-heart"></i></div>
+              <div class="stat-data">
+                <span class="label">Wishlist Items</span>
+                <span class="value">0</span>
+              </div>
+            </div>
+            <div class="stat-box yellow-box">
+              <div class="stat-img"><i class="fas fa-star"></i></div>
+              <div class="stat-data">
+                <span class="label">Bonus Points</span>
+                <span class="value">50</span> </div>
+            </div>
+          </div>
+
+          <div class="sections-grid">
+            
+            <div class="inner-card">
+              <h2 class="section-title">Getting Started</h2>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 10px;">
+                <li style="font-size: 13px; color: #2e7d32; font-weight: 600;"><i class="fas fa-check-circle"></i> Account Created Successfully</li>
+                <li style="font-size: 13px; color: #555;"><i class="far fa-circle"></i> Complete Your Profile Settings</li>
+                <li style="font-size: 13px; color: #555;"><i class="far fa-circle"></i> Explore Plant Categories</li>
+                <li style="font-size: 13px; color: #555;"><i class="far fa-circle"></i> Add Your First Plant to Wishlist</li>
+              </ul>
+              <button class="btn-action-light" onclick="switchTab('settings')">Complete Profile</button>
+            </div>
+
+            <div class="inner-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h2 class="section-title">Start Your Collection</h2>
+                <p style="font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 15px;">
+                  You don't have any plants or orders yet. Explore our curated premium plants and bring nature home today!
+                </p>
+              </div>
+              <button class="btn-green-solid" style="width: 100%;" onclick="window.location.href='categories.html'">Browse Plants Shop</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-orders" class="tab-content">
+          <h2 class="section-title">Order History</h2>
+          <div style="text-align: center; padding: 40px 20px;">
+            <i class="fas fa-shopping-bag" style="font-size: 48px; color: #cbd5e1; margin-bottom: 15px;"></i>
+            <p style="color: #666; font-size: 14px;">You haven't placed any orders yet.</p>
+            <button class="btn-action-light" style="width: auto; padding: 10px 20px;" onclick="window.location.href='categories.html'">Shop Now</button>
+          </div>
+        </div>
+
+        <div id="tab-wishlist" class="tab-content">
+          <h2 class="section-title">My Saved Wishlist</h2>
+          <div style="text-align: center; padding: 40px 20px;">
+            <i class="fas fa-heart" style="font-size: 48px; color: #cbd5e1; margin-bottom: 15px;"></i>
+            <p style="color: #666; font-size: 14px; margin-bottom: 15px;">Your wishlist is currently empty.</p>
+            <button class="btn-green-solid" onclick="window.location.href='categories.html'">Go To Shop</button>
+          </div>
+        </div>
+
+        <div id="tab-plants" class="tab-content">
+          <h2 class="section-title">My Plant Collection</h2>
+          <div style="text-align: center; padding: 40px 20px;">
+            <i class="fas fa-seedling" style="font-size: 48px; color: #cbd5e1; margin-bottom: 15px;"></i>
+            <p style="color: #666; font-size: 14px;">No plants found in your garden yet. Adopt your first plant!</p>
+          </div>
+        </div>
+
+        <div id="tab-settings" class="tab-content">
+          <h2 class="section-title">Account Settings</h2>
+          <p class="settings-subtitle">Update your personal profile information, email address, and security details.</p>
+          
+          <form class="settings-form" onsubmit="event.preventDefault(); alert('Profile Saved Successfully!');">
+            <div class="settings-grid-fields">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Enter first name" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Enter last name" required>
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" value="newuser@example.com" required>
+              </div>
+              <div class="form-group">
+                <label>Contact Number</label>
+                <input type="text" placeholder="+1 (555) 000-0000">
+              </div>
+              <div class="form-group">
+                <label>New Password</label>
+                <input type="password" placeholder="Enter new password">
+              </div>
+              <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm new password">
+              </div>
+            </div>
+            <button type="submit" class="btn-green-solid" style="margin-top: 25px; padding: 12px 30px;">Save Changes</button>
+          </form>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <footer class="beautiful-footer">
+    <div class="footer-wrap">
+      <div class="footer-section brand-info">
+        <h3>🌿 GreenNest</h3>
+        <p>Growing a Greener Future since 2026.</p>
+      </div>
+      <div class="footer-section links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="categories.html">Shop Categories</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon insta"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 GreenNest. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function switchTab(tabId, clickedElement) {
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(c => c.classList.remove('active'));
+
+      const menuItems = document.querySelectorAll('.menu-item');
+      menuItems.forEach(i => i.classList.remove('active'));
+
+      document.getElementById('tab-' + tabId).classList.add('active');
+
+      if(clickedElement) {
+        clickedElement.classList.add('active');
+      } else {
+        const items = document.querySelectorAll('.menu-item');
+        items.forEach(item => {
+          if(item.innerHTML.toLowerCase().includes(tabId)) item.classList.add('active');
+        });
+      }
+    }
+  </script>
+
+</body>

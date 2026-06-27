@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GreenNest - Sign Up</title>
   <link rel="stylesheet" href="signup.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -35,15 +34,15 @@
         <p>Sign up to shop for beautiful indoor plants and get care tips.</p>
       </div>
 
-      <!-- Signup Form -->
-      <form class="signup-form" action="#" method="POST">
+      <!-- Signup Form (Id "signupForm" যুক্ত করা হয়েছে) -->
+      <form class="signup-form" id="signupForm" action="#" method="POST">
         
         <!-- Full Name Input -->
         <div class="input-group-label">
           <i class="far fa-user"></i> Full Name
         </div>
         <div class="input-field-wrapper">
-          <i class="fas fa-lock icon-placeholder"></i>
+          <i class="fas fa-lock icon-placeholder"></i> <!-- নোটিশ: এখানে আইকন চাইলে পরিবর্তন করতে পারেন -->
           <input type="text" placeholder="Full Name" required>
         </div>
 
@@ -79,7 +78,7 @@
     </div>
   </main>
 
-  <!-- Footer Bar ) -->
+  <!-- Footer Bar -->
   <footer class="beautiful-footer">
     <div class="footer-wrap">
       <div class="footer-section brand-info">
@@ -109,5 +108,14 @@
     </div>
   </footer>
 
+  <!-- JavaScript Section -->
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // পেজ রিফ্রেশ হওয়া বন্ধ করবে
+
+      // ড্যাশবোর্ড পেজের ফাইল নেম অনুযায়ী রিডাইরেক্ট করবে
+      window.location.href = "SIGN DASH.html"; 
+    });
+  </script>
 </body>
 </html>

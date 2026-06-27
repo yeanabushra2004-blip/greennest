@@ -1,0 +1,304 @@
+/* Base Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #F3F1EA; /* Soft Warm Gray/Beige from image */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.main-header {
+    background-color: #FAF8F5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 1px solid #E4E0D5;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4A6B42; /* Main Green Brand Color */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4A6B42;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    color: #444;
+    cursor: pointer;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #D9534F;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* CONTAINER */
+.dashboard-container {
+    display: flex;
+    flex: 1;
+    width: 95%;
+    max-width: 1400px;
+    margin: 25px auto;
+    background: #FAF8F5;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* SIDEBAR (Dark Green Request) */
+.sidebar {
+    width: 260px;
+    background-color: #1E3F20; /* Dark Green */
+    color: #E2E8F0;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-profile {
+    text-align: center;
+    padding: 0 20px 25px 20px;
+    border-bottom: 1px solid #2A542D;
+}
+
+.avatar-placeholder {
+    width: 90px;
+    height: 90px;
+    background-color: #2A542D;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: #A2C59D;
+    border: 3px solid #3B6E3F;
+}
+
+.user-profile h3 {
+    font-size: 18px;
+    color: #FFF;
+    margin-bottom: 5px;
+}
+
+.user-profile p {
+    font-size: 13px;
+    color: #A2C59D;
+}
+
+.nav-menu {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.nav-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    color: #C8D6C7;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.nav-menu li a:hover, 
+.nav-menu li a.active {
+    background-color: #2A542D;
+    color: #FFF;
+    border-left: 4px solid #A2C59D;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-image: linear-gradient(to bottom right, rgba(255,255,255,0.8), rgba(245,242,235,0.5));
+}
+
+.welcome-section h2 {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #1E3F20;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.welcome-section p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* SIGNUP CARD */
+.signup-card {
+    background: #FFF;
+    border: 1px solid #E4E0D5;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 650px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.signup-card h3 {
+    color: #333;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #E4E0D5;
+    margin: 15px 0 25px 0;
+}
+
+/* FORM ELEMENTS */
+.form-group {
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D1C9BC;
+    border-radius: 6px;
+    background-color: #FAF9F6;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4A6B42;
+    background-color: #FFF;
+    box-shadow: 0 0 0 3px rgba(74, 107, 66, 0.1);
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.form-checkbox span {
+    color: #4A6B42;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* BUTTON */
+.btn-signup {
+    width: 100%;
+    background-color: #4A6B42; /* Soft Green Button */
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-signup:hover {
+    background-color: #3B5634;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.form-footer a {
+    color: #4A6B42;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* FOOTER */
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #FAF8F5;
+    border-top: 1px solid #E4E0D5;
+    font-size: 13px;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

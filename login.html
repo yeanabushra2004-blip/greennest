@@ -9,7 +9,6 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <div class="logo">🌿 GreenNest</div>
     <nav>
@@ -24,18 +23,15 @@
     </nav>
   </header>
 
-  <!-- Login Background Wrapper -->
   <main class="login-bg-wrapper">
     <div class="login-popup-card">
       
-      <!-- Popup Header -->
       <div class="popup-header">
         <h2>Welcome Back!</h2>
         <p>Log in to your GreenNest account</p>
       </div>
 
-      <!-- Login Form -->
-      <form class="login-form" action="#" method="POST">
+      <form class="login-form" id="loginForm" action="#">
         
         <div class="input-group-label">
           Email Address
@@ -45,22 +41,18 @@
           <input type="email" placeholder="Email Address" required>
         </div>
 
-        <!-- Password Input -->
         <div class="input-field-wrapper" style="margin-bottom: 8px;">
           <i class="fas fa-lock icon-placeholder"></i>
           <input type="password" placeholder="Password" required>
         </div>
 
-        <!-- Forgot Password -->
         <div class="forgot-password-wrap">
           <a href="#" class="forgot-link">Forgot password?</a>
         </div>
 
-        <!-- Log In Submit Button -->
         <button type="submit" class="btn-login-submit">Log In</button>
       </form>
 
-      <!-- Sign Up Redirect -->
       <div class="popup-footer">
         <hr class="footer-divider">
         <p class="signup-redirect">Don't have an account? <a href="signup.html">Sign Up</a></p>
@@ -69,7 +61,6 @@
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="beautiful-footer">
     <div class="footer-wrap">
       <div class="footer-section brand-info">
@@ -98,6 +89,15 @@
       <p>&copy; 2026 GreenNest. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // ফর্মের ডিফল্ট সাবমিট (পেজ রিফ্রেশ) আটকাবে
+      
+      // লগইন সফল হলে সরাসরি dashboard.html পেজে নিয়ে যাবে
+      window.location.href = "dashboard.html";
+    });
+  </script>
 
 </body>
 </html>
