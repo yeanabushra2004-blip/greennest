@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenNest - Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Connected Header Bar -->
+    <header>
+        <div class="logo">🌿 GreenNest</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Checkout Main Content -->
+    <main class="checkout-page-container">
+        <section class="cart-title-section">
+            <h1>Checkout</h1>
+            <p>Please enter your shipping and payment details below.</p>
+        </section>
+
+        <div class="checkout-wrapper">
+            <!-- Left Side: Shipping Form -->
+            <div class="checkout-form-area">
+                <h3><i class="fas fa-truck"></i> Shipping Information</h3>
+                <form id="checkout-form" onsubmit="placeOrder(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fname">Full Name</label>
+                            <input type="text" id="fname" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="017XXXXXXXX" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Shipping Address</label>
+                        <textarea id="address" rows="3" placeholder="House no, Road no, Area, City" required></textarea>
+                    </div>
+
+                    <h3 class="payment-title"><i class="fas fa-credit-card"></i> Payment Method</h3>
+                    <div class="payment-methods">
+                        <label class="method-option">
+                            <input type="radio" name="payment" value="cod" checked>
+                            <span class="method-box">
+                                <i class="fas fa-money-bill-wave"></i> Cash on Delivery
+                            </span>
+                        </label>
+                        <label class="method-option">
+                            <input type="radio" name="payment" value="bkash">
+                            <span class="method-box">
+                                <i class="fas fa-mobile-alt"></i> bKash / Rocket
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="place-order-btn">Confirm Order</button>
+                </form>
+            </div>
+
+            <!-- Right Side: Order Summary -->
+            <div class="order-summary-card">
+                <h3>Summary</h3>
+                <div class="summary-row">
+                    <span>Items Total:</span>
+                    <span>$105.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span>$5.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax:</span>
+                    <span>$8.40</span>
+                </div>
+                <hr>
+                <div class="summary-row total-row">
+                    <span>Grand Total:</span>
+                    <span class="grand-total-price">$118.40</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Original Beautiful Footer Bar -->
+    <footer class="beautiful-footer">
+        <div class="footer-wrap">
+            <div class="footer-section brand-info">
+                <h3>🌿 GreenNest</h3>
+                <p>Growing a Greener Future since 2026.</p>
+            </div>
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="categories.html">Shop Categories</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon insta"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GreenNest. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

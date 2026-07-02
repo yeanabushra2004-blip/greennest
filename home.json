@@ -1,28 +1,158 @@
-{
-  "plants": [
-    {
-      "name": "Peace Lily",
-      "code": "BL15",
-      "price": "$15",
-      "image": "https://m.media-amazon.com/images/I/51yVNDa9tDL._AC_UF1000,1000_QL80_.jpg"
+[
+  { "id": 1, 
+  "name": "Areca Palm",
+   "price": 20,
+    "category": "indoor", 
+    "image": "https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=400" 
+  },
+
+  { "id": 2,
+   "name": "Snake Plant",
+    "price": 15,
+   "category": "indoor",
+    "image": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=400" 
+  },
+  { "id": 3,
+   "name": "Monstera",
+    "price": 30, "category": "indoor", 
+    "image": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=400"
+   },
+  { "id": 4, 
+  "name": "Pothos", 
+  "price": 10, 
+  "category": "indoor", 
+  "image": "https://images.unsplash.com/photo-1597055181300-e3633a207518?q=80&w=400" 
+},
+  { "id": 5,
+   "name": "Peace Lily", 
+   "price": 12,
+    "category": "indoor", 
+    "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?q=80&w=400" 
+  },
+  { "id": 6,
+   "name": "ZZ Plant",
+   "price": 18,
+   "category": "indoor",
+    "image": "https://images.unsplash.com/photo-1632205514631-f1556819b162?q=80&w=400"
+   },
+  { "id": 7, 
+  "name": "Spider Plant", 
+  "price": 15,
+  "category": "indoor",
+   "image": "https://images.unsplash.com/photo-1572688484438-313a6e50c333?q=80&w=400"
+   },
+  { "id": 8, 
+  "name": "Parlor Palm",
+   "price": 22,
+    "category": "indoor", 
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=400" 
+  },
+  { "id": 9,
+   "name": "Boston Fern",
+    "price": 16, 
+    "category": "indoor", 
+    "image": "https://images.unsplash.com/photo-1512428813824-f713c2410b33?q=80&w=400"
+   },
+  { "id": 10,
+   "name": "Cast Iron Plant",
+    "price": 25, 
+    "category": "indoor", 
+    "image": "https://images.unsplash.com/photo-1592150621744-aca64f48394a?q=80&w=400"
+   },
+
+  { "id": 11,
+   "name": "Aloe Vera",
+    "price": 14, 
+    "category": "purifying",
+    "image": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=400"
+   },
+  { "id": 12, 
+  "name": "English Ivy",
+   "price": 18, 
+   "category": "purifying", 
+   "image": "https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=400" 
+  },
+  { "id": 13,
+   "name": "Rubber Plant",
+    "price": 28,
+     "category": "purifying", 
+     "image": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=400"
+   },
+  { "id": 14,
+   "name": "Dracaena", 
+   "price": 24,
+    "category": "purifying", 
+    "image": "https://images.unsplash.com/photo-1597055181300-e3633a207518?q=80&w=400" 
+  },
+  { "id": 15,
+  "name": "Weeping Fig", 
+  "price": 35,
+   "category": "purifying",
+    "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?q=80&w=400"
+   },
+  { "id": 16,
+   "name": "Chrysanthemum",
+    "price": 19,
+     "category": "purifying",
+     "image": "https://images.unsplash.com/photo-1632205514631-f1556819b162?q=80&w=400"
+     },
+  { "id": 17, 
+  "name": "Bamboo Palm", 
+  "price": 32, 
+  "category": "purifying", 
+  "image": "https://images.unsplash.com/photo-1572688484438-313a6e50c333?q=80&w=400" 
+},
+  { "id": 18,
+   "name": "Broadleaf Lady Palm", 
+   "price": 40, 
+   "category": "purifying",
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=400"
+   },
+  { "id": 19, 
+  "name": "Chinese Evergreen",
+   "price": 22, 
+   "category": "purifying",
+    "image": "https://images.unsplash.com/photo-1512428813824-f713c2410b33?q=80&w=400" 
+  },
+  { "id": 20,
+   "name": "Gerbera Daisy", 
+   "price": 15, 
+   "category": "purifying",
+    "image": "https://images.unsplash.com/photo-1592150621744-aca64f48394a?q=80&w=400" },
+
+  { "id": 21,
+   "name": "Fiddle Leaf Fig", 
+   "price": 45, 
+   "category": "decorative", 
+   "image": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=400"
+   },
+  { "id": 22,
+   "name": "Bird of Paradise",
+    "price": 50,
+     "category": "decorative", 
+     "image": "https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=400" 
     },
-    {
-      "name": "Snake Plant",
-      "code": "SP20",
-      "price": "$20",
-      "image": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&q=80&w=400"
+  { "id": 23,
+   "name": "Calathea Orbifolia",
+    "price": 26,
+     "category": "decorative",
+      "image": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=400" 
     },
-    {
-      "name": "Fiddle Leaf Fig",
-      "code": "FLF25",
-      "price": "$25",
-      "image": "https://www.palasa.co.in/cdn/shop/articles/IMG_20220226_173034_1.jpg?v=1694161186"
-    },
-    {
-      "name": "Succulent Set",
-      "code": "SS30",
-      "price": "$30",
-      "image": "https://media.istockphoto.com/id/1056600248/photo/house-indoor-plants-collection-succulent-and-cactus-in-different-pots-on-white-background.jpg?s=612x612&w=0&k=20&c=VaPeEhKGPSihTmgsZXSv5z_k5s6kIe59V3zrNf8bIYQ="
-    }
-  ]
-}
+  { "id": 24, 
+  "name": "String of Pearls", 
+  "price": 20,
+   "category": "decorative", 
+   "image": "https://images.unsplash.com/photo-1597055181300-e3633a207518?q=80&w=400"
+   },
+  { "id": 25,
+   "name": "African Violet", 
+   "price": 18, 
+   "category":"decorative",
+    "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?q=80&w=400" 
+  },
+  { "id": 26, "name": "Anthurium", "price": 29, "category": "decorative", "image": "https://images.unsplash.com/photo-1632205514631-f1556819b162?q=80&w=400" },
+  { "id": 27, "name": "Croton", "price": 21, "category": "decorative", "image": "https://images.unsplash.com/photo-1572688484438-313a6e50c333?q=80&w=400" },
+  { "id": 28, "name": "Begonia Maculata", "price": 27, "category": "decorative", "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=400" },
+  { "id": 29, "name": "Polka Dot Plant", "price": 14, "category": "decorative", "image": "https://images.unsplash.com/photo-1512428813824-f713c2410b33?q=80&w=400" },
+  { "id": 30, "name": "Peperomia Argyreia", "price": 17, "category": "decorative", "image": "https://images.unsplash.com/photo-1592150621744-aca64f48394a?q=80&w=400" }
+]
