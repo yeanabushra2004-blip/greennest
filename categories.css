@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /* ==========================================================================
-   0. BASE RESETS & LAYOUT
+   0. BASE RESETS & FULL-WIDTH LAYOUT
    ========================================================================== */
 * {
   margin: 0;
@@ -16,22 +16,18 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.container, .main-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* ==========================================================================
-   1. YOUR ORIGINAL HEADER STYLES
+   1. PREMIUM HEADER STYLES
    ========================================================================== */
-header {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 8%;
+  padding: 18px 8%; 
   background-color: #2e7d32 !important; 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -43,196 +39,168 @@ header {
   font-size: 1.5em;
   font-weight: 700;
   color: #ffffff !important; 
-  letter-spacing: 0.5px;
-}
-
-nav ul {
-  list-style: none;
   display: flex;
-  gap: 10px;
   align-items: center;
+  gap: 8px;
 }
 
-nav a {
+.nav-links { list-style: none; display: flex; gap: 20px; align-items: center; }
+.nav-links a {
   text-decoration: none;
   color: #ffffff !important; 
   font-weight: 500;
   font-size: 14px;
   padding: 8px 16px;
   border-radius: 6px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
-
-nav a:hover, 
-nav a.active {
-  background-color: rgba(255, 255, 255, 0.15) !important;
-  color: #ffffff !important; 
-}
+.nav-links a:hover, .nav-links a.active { background-color: rgba(255, 255, 255, 0.18) !important; }
 
 /* ==========================================================================
-   2. BREADCRUMB & TITLE SECTION (IMAGE STYLE)
+   2. TITLE & CENTERED SORT DROPDOWN
    ========================================================================== */
 .page-title-section {
   background-color: #ffffff;
-  padding: 30px 0;
-  border-bottom: 1px solid #eaeaea;
+  padding: 40px 4%;
+  border-bottom: 1px solid #edf2ed;
+  text-align: center;
 }
 
-.breadcrumb {
-  font-size: 13px;
-  color: #888;
-  margin-bottom: 15px;
-}
+.breadcrumb { 
+  font-size: 13px; 
+  color: #718096; 
+  margin-bottom: 12px;
+ }
+#current-crumb {
+   color: #2e7d32;
+    font-weight: 500; 
+  }
+.page-title-section h1 { font-size: 32px; font-weight: 600; margin-bottom: 8px; }
 
-.page-title-section h1 {
-  font-size: 32px;
-  font-weight: 600;
-  color: #111;
-  margin-bottom: 8px;
+/* Centered Sort Dropdown */
+.sort-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px;
+  background: #f7fafc;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
 }
-
-.subtitle {
-  color: #666;
+.sort-container label { 
+  font-size: 16px;
+   font-weight: 600; 
+   color: #2d3748; 
+  }
+.sort-select {
+  padding: 12px 30px;
   font-size: 15px;
+  border: 2px solid #2e7d32;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #2e7d32;
+  cursor: pointer;
+  min-width: 250px;
+  font-weight: 600;
+  transition: 0.3s;
 }
+.sort-select:focus {
+   background-color: #e8f5e9; 
+   outline: none; 
+  }
 
 /* ==========================================================================
-   3. MAIN CONTENT GRAPHICS & CARDS (IMAGE STYLE)
+   3. MAIN CONTENT
    ========================================================================== */
 .main-container {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 30px;
-  padding-top: 40px;
-  padding-bottom: 60px;
-  flex: 1; /* Pushes footer down if content is short */
+  grid-template-columns: 300px 1fr; 
+  gap: 40px;
+  padding: 40px 4% 60px 4%; 
 }
 
-/* Sidebar Filter */
 .sidebar {
   background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 26px; 
+  border-radius: 12px;
   height: fit-content;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-}
-
-.sidebar h3 {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.filter-list {
-  list-style: none;
+  border: 1px solid #edf2ed;
 }
 
 .filter-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 8px;
-  font-size: 14px;
-  color: #555;
+  gap: 12px;
+  padding: 12px 14px; 
   cursor: pointer;
-  border-radius: 4px;
-  transition: 0.2s ease;
+  border-radius: 8px;
+  transition: 0.2s;
 }
+.filter-item.active { background-color: #e8f5e9; color: #2e7d32; font-weight: 600; }
 
-.filter-item:hover {
-  background-color: #f5f5f5;
-}
-
-.filter-item.active {
-  background-color: #e8f5e9;
-  color: #2e7d32;
-  font-weight: 600;
-}
-
-.radio-icon {
-  font-size: 16px;
-}
-
-/* Product Grid */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
   gap: 20px;
 }
 
-/* Product Card */
 .product-card {
   background-color: #ffffff;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  padding: 12px;
+  min-height: 420px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease;
+  transition: 0.3s;
 }
-
-.product-card:hover {
-  transform: translateY(-2px);
-}
-
 .image-container {
-  width: 100%;
-  height: 200px;
-  background-color: #f0f0f0;
+  height: 220px;
+  background: #f7fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  overflow: hidden;
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
 }
-
 .card-info {
-  padding: 15px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex: 1;
 }
-
-.card-info h4 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 4px;
-}
-
-.price {
-  font-size: 13px;
-  color: #666;
-  margin-bottom: 15px;
-}
-
 .shop-btn {
   background-color: #2e7d32;
-  color: white;
+  color: #fff;
   border: none;
-  padding: 11px;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 600;
+  padding: 12px;
+  border-radius: 8px;
   cursor: pointer;
-  width: 100%;
   margin-top: auto;
-  transition: background-color 0.2s ease;
+  border-bottom: 3px solid #1b5e20;
 }
-
-.shop-btn:hover {
-  background-color: #1b5e20;
-}
+.shop-btn:active { transform: translateY(2px); border-bottom-width: 0; }
 
 /* ==========================================================================
-   4. YOUR ORIGINAL BEAUTIFUL FOOTER STYLES
+   4. FOOTER
    ========================================================================== */
+
 .beautiful-footer {
-  background-color: #2e7d32;
-  color: white;
-  padding: 50px 8% 20px;
+  background-color: #2e7d32; /* ব্যাকগ্রাউন্ড সবুজ */
+  color: #ffffff; /* সব টেক্সট সাদা */
+  padding: 60px 4% 20px 4%;
   margin-top: auto;
+  width: 100%;
 }
 
 .footer-wrap {
@@ -240,71 +208,78 @@ nav a.active {
   justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* হালকা বর্ডার */
+  padding-bottom: 40px;
 }
 
-.footer-section {
-  flex: 1;
-  min-width: 220px;
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #ffffff; /* হেডিং সাদা */
 }
 
 .brand-info h3 {
   font-size: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  color: #ffffff; /* ব্র্যান্ড নাম সাদা */
 }
 
 .brand-info p {
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-.links h4, .social h4 {
-  font-size: 16px;
-  margin-bottom: 15px;
-}
-
-.links ul {
-  list-style: none;
-}
-
-.links ul li {
-  margin-bottom: 8px;
+  color: #ffffff; /* প্যারাগ্রাফ সাদা */
+  opacity: 0.9;
 }
 
 .links ul li a {
-  color: white;
+  color: #ffffff; /* লিঙ্ক সাদা */
   text-decoration: none;
   font-size: 14px;
   opacity: 0.8;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .links ul li a:hover {
   opacity: 1;
-  padding-left: 5px;
+  text-decoration: underline;
 }
 
+/* আইকনগুলো সাদা করার স্টাইল */
 .social-icons {
   display: flex;
-  gap: 12px;
+  gap: 15px;
 }
 
 .social-icon {
-  width: 36px;
-  height: 36px;
-  background-color: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ffffff; /* সাদা বর্ডার */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #ffffff; /* আইকন সাদা */
   border-radius: 50%;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #ffffff;
+  color: #2e7d32; /* হোভার করলে ব্যাকগ্রাউন্ড সাদা এবং আইকন সবুজ হবে */
 }
 
 .footer-bottom {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 25px;
   font-size: 13px;
-  opacity: 0.7;
+  color: #ffffff; /* কপিরাইট টেক্সট সাদা */
+  opacity: 0.8;
+}
+/* Responsive */
+@media (max-width: 1024px) {
+  .main-container { grid-template-columns: 260px 1fr; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .main-container { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: 1fr; }
 }

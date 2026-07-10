@@ -9,9 +9,9 @@
 </head>
 <body>
 
-  <header>
+  <header class="main-header">
     <div class="logo">🌿 GreenNest</div>
-    <nav>
+    <nav class="nav-links">
       <ul>
         <li><a href="home.html" class="nav-item">Home</a></li>
         <li><a href="about.html" class="nav-item">About Us</a></li>
@@ -26,13 +26,16 @@
   <div class="dashboard-bg-wrapper">
     <div class="main-dashboard-card">
       
+      <!-- সাইডবার সেকশন -->
       <aside class="gn-sidebar">
         <div class="profile-box">
           <div class="avatar-wrapper">
             <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=400" alt="New User" class="user-photo">
+            <span class="status-online"></span>
           </div>
           <h3 class="user-name">Welcome, Explorer!</h3>
           <p class="user-email">newuser@example.com</p>
+          <span class="user-badge">Seedling Member</span>
         </div>
         
         <nav class="sidebar-nav">
@@ -52,33 +55,39 @@
             <li class="menu-item" onclick="switchTab('settings', this)">
               <a href="#settings"><i class="fas fa-user-cog"></i> Account Settings</a>
             </li>
-            <li class="menu-item">
-              <a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
-            </li>
           </ul>
+
+          <div class="logout-item">
+            <a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+          </div>
         </nav>
       </aside>
 
+      <!-- ড্যাশবোর্ডের মূল কন্টেন্ট এরিয়া -->
       <main class="gn-content">
         
+        <!-- DASHBOARD TAB -->
         <div id="tab-dashboard" class="tab-content active">
-          <div class="welcome-heading">
+          
+          <!-- প্রিমিয়াম ওয়েলকাম ব্যানার -->
+          <div class="welcome-banner">
             <h1>Welcome to the GreenNest Family! 🎉</h1>
-            <p>Your account is successfully created. Let's start your green journey!</p>
+            <p>Your account has been created successfully. Let's start your green journey by setting up your garden preference!</p>
           </div>
 
+          <!-- নতুন সাইন-আপ স্ট্যাটাস কাউন্টার -->
           <div class="stats-row">
             <div class="stat-box brown-box">
               <div class="stat-img"><i class="fas fa-box-open"></i></div>
               <div class="stat-data">
-                <span class="label">Orders Pending</span>
+                <span class="label">Orders Placed</span>
                 <span class="value">0</span>
               </div>
             </div>
             <div class="stat-box green-box">
               <div class="stat-img"><i class="fas fa-leaf"></i></div>
               <div class="stat-data">
-                <span class="label">Plants Owned</span>
+                <span class="label">Plants Adopted</span>
                 <span class="value">0</span>
               </div>
             </div>
@@ -90,96 +99,107 @@
               </div>
             </div>
             <div class="stat-box yellow-box">
-              <div class="stat-img"><i class="fas fa-star"></i></div>
+              <div class="stat-img"><i class="fas fa-gift"></i></div>
               <div class="stat-data">
-                <span class="label">Bonus Points</span>
-                <span class="value">50</span> </div>
+                <span class="label">Sign-up Bonus</span>
+                <span class="value bonus-text">50 Pts</span> 
+              </div>
             </div>
           </div>
 
+          <!-- অনবোর্ডিং গাইড এবং অফার সেকশন -->
           <div class="sections-grid">
             
-            <div class="inner-card">
-              <h2 class="section-title">Getting Started</h2>
-              <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 10px;">
-                <li style="font-size: 13px; color: #2e7d32; font-weight: 600;"><i class="fas fa-check-circle"></i> Account Created Successfully</li>
-                <li style="font-size: 13px; color: #555;"><i class="far fa-circle"></i> Complete Your Profile Settings</li>
-                <li style="font-size: 13px; color: #555;"><i class="far fa-circle"></i> Explore Plant Categories</li>
-                <li style="font-size: 13px; color: #555;"><i class="far fa-circle"></i> Add Your First Plant to Wishlist</li>
+            <!-- অনবোর্ডিং বা চেকলিস্ট উইজেট -->
+            <div class="inner-card checklist-card">
+              <h2 class="section-title"><i class="fas fa-clipboard-check"></i> Getting Started Checklist</h2>
+              <ul class="checklist-items">
+                <li class="checked-item">
+                  <i class="fas fa-check-circle"></i> Account Created Successfully
+                </li>
+                <li>
+                  <i class="far fa-circle"></i> Complete Your Profile Settings
+                </li>
+                <li>
+                  <i class="far fa-circle"></i> Take Plant Match Quiz (Find your perfect plant)
+                </li>
+                <li>
+                  <i class="far fa-circle"></i> Browse Plant Categories & Save first item
+                </li>
               </ul>
-              <button class="btn-action-light" onclick="switchTab('settings')">Complete Profile</button>
+              <button class="btn-green-solid" onclick="switchTab('settings')">Complete Profile Now →</button>
             </div>
 
-            <div class="inner-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <!-- ফার্স্ট পারচেজ প্রোমোশন کارڈ -->
+            <div class="inner-card promo-card">
               <div>
-                <h2 class="section-title">Start Your Collection</h2>
-                <p style="font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 15px;">
-                  You don't have any plants or orders yet. Explore our curated premium plants and bring nature home today!
+                <span class="promo-tag">New Member Offer</span>
+                <h2 class="section-title">Get 15% OFF!</h2>
+                <p class="promo-desc">
+                  Use code <strong class="promo-code">GREENNEW15</strong> at checkout for your very first plant adoption.
                 </p>
               </div>
-              <button class="btn-green-solid" style="width: 100%;" onclick="window.location.href='categories.html'">Browse Plants Shop</button>
+              <button class="btn-action-light" onclick="window.location.href='categories.html'">Explore Shop</button>
             </div>
+
           </div>
+
         </div>
 
+        <!-- ORDERS TAB -->
         <div id="tab-orders" class="tab-content">
           <h2 class="section-title">Order History</h2>
-          <div style="text-align: center; padding: 40px 20px;">
-            <i class="fas fa-shopping-bag" style="font-size: 48px; color: #cbd5e1; margin-bottom: 15px;"></i>
-            <p style="color: #666; font-size: 14px;">You haven't placed any orders yet.</p>
-            <button class="btn-action-light" style="width: auto; padding: 10px 20px;" onclick="window.location.href='categories.html'">Shop Now</button>
+          <div class="empty-state">
+            <i class="fas fa-shopping-bag"></i>
+            <p>You haven't placed any orders yet. Start shopping to view history!</p>
+            <button class="btn-green-solid" onclick="window.location.href='categories.html'">Browse Plants</button>
           </div>
         </div>
 
+        <!-- WISHLIST TAB -->
         <div id="tab-wishlist" class="tab-content">
           <h2 class="section-title">My Saved Wishlist</h2>
-          <div style="text-align: center; padding: 40px 20px;">
-            <i class="fas fa-heart" style="font-size: 48px; color: #cbd5e1; margin-bottom: 15px;"></i>
-            <p style="color: #666; font-size: 14px; margin-bottom: 15px;">Your wishlist is currently empty.</p>
-            <button class="btn-green-solid" onclick="window.location.href='categories.html'">Go To Shop</button>
+          <div class="empty-state">
+            <i class="fas fa-heart"></i>
+            <p>Your wishlist is currently empty. Save your favorite plants here.</p>
+            <button class="btn-green-solid" onclick="window.location.href='categories.html'">Explore Shop</button>
           </div>
         </div>
 
+        <!-- PLANTS TAB -->
         <div id="tab-plants" class="tab-content">
           <h2 class="section-title">My Plant Collection</h2>
-          <div style="text-align: center; padding: 40px 20px;">
-            <i class="fas fa-seedling" style="font-size: 48px; color: #cbd5e1; margin-bottom: 15px;"></i>
-            <p style="color: #666; font-size: 14px;">No plants found in your garden yet. Adopt your first plant!</p>
+          <div class="empty-state">
+            <i class="fas fa-seedling"></i>
+            <p>No plants found in your digital garden. Once you buy a plant, its care tracking will appear here!</p>
           </div>
         </div>
 
+        <!-- SETTINGS TAB -->
         <div id="tab-settings" class="tab-content">
           <h2 class="section-title">Account Settings</h2>
-          <p class="settings-subtitle">Update your personal profile information, email address, and security details.</p>
+          <p class="settings-subtitle">Please complete your profile details to ensure seamless delivery.</p>
           
-          <form class="settings-form" onsubmit="event.preventDefault(); alert('Profile Saved Successfully!');">
+          <form class="settings-form" onsubmit="event.preventDefault(); alert('Profile Updated Successfully!');">
             <div class="settings-grid-fields">
               <div class="form-group">
                 <label>First Name</label>
-                <input type="text" placeholder="Enter first name" required>
+                <input type="text" placeholder="Enter your first name" required>
               </div>
               <div class="form-group">
                 <label>Last Name</label>
-                <input type="text" placeholder="Enter last name" required>
+                <input type="text" placeholder="Enter your last name" required>
               </div>
               <div class="form-group">
                 <label>Email Address</label>
-                <input type="email" value="newuser@example.com" required>
+                <input type="email" value="newuser@example.com" disabled class="disabled-input">
               </div>
               <div class="form-group">
                 <label>Contact Number</label>
                 <input type="text" placeholder="+1 (555) 000-0000">
               </div>
-              <div class="form-group">
-                <label>New Password</label>
-                <input type="password" placeholder="Enter new password">
-              </div>
-              <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" placeholder="Confirm new password">
-              </div>
             </div>
-            <button type="submit" class="btn-green-solid" style="margin-top: 25px; padding: 12px 30px;">Save Changes</button>
+            <button type="submit" class="btn-green-solid btn-save">Save Profile</button>
           </form>
         </div>
 
@@ -238,3 +258,4 @@
   </script>
 
 </body>
+</html>

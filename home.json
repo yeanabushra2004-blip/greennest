@@ -1,158 +1,315 @@
 [
-  { "id": 1, 
-  "name": "Areca Palm",
-   "price": 20,
-    "category": "indoor", 
-    "image": "https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=400" 
+  {
+    "id": 101,
+    "name": "Monstera Deliciosa",
+    "category": "indoor",
+    "subCategory": "indoor",
+    "price": 30.00,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Starr_080731-9572_Monstera_deliciosa.jpg/250px-Starr_080731-9572_Monstera_deliciosa.jpg",
+    "description": "Known as the Swiss Cheese Plant, this statement foliage piece adds an instant gorgeous tropical vibe.",
+    "reviews": [
+      { "user": "Sabbir Ahmed", "rating": 5, "comment": "Huge green leaves, absolutely stunning." },
+      { "user": "Anika Rahman", "rating": 5, "comment": "Best decorative plant in my current collection." },
+      { "user": "Imran Khan", "rating": 4, "comment": "Very healthy plant, highly recommended!" }
+    ]
   },
-
-  { "id": 2,
-   "name": "Snake Plant",
-    "price": 15,
-   "category": "indoor",
-    "image": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=400" 
+  {
+    "id": 102,
+    "name": "Snake Plant",
+    "category": "indoor",
+    "subCategory": "purifying",
+    "price": 15.00,
+    "image": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=500",
+    "description": "The Snake Plant is an ideal choice for beginners. It is incredibly hardy and purifies bedroom oxygen.",
+    "reviews": [
+      { "user": "Nabila", "rating": 5, "comment": "Excellent plant! Delivered in very healthy condition." },
+      { "user": "Asif", "rating": 4, "comment": "Looks wonderful on my office desk." }
+    ]
   },
-  { "id": 3,
-   "name": "Monstera",
-    "price": 30, "category": "indoor", 
-    "image": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=400"
-   },
-  { "id": 4, 
-  "name": "Pothos", 
-  "price": 10, 
-  "category": "indoor", 
-  "image": "https://images.unsplash.com/photo-1597055181300-e3633a207518?q=80&w=400" 
-},
-  { "id": 5,
-   "name": "Peace Lily", 
-   "price": 12,
-    "category": "indoor", 
-    "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?q=80&w=400" 
+  {
+    "id": 103,
+    "name": "Pothos (Money Plant)",
+    "category": "indoor",
+    "subCategory": "purifying",
+    "price": 10.00,
+    "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=500",
+    "description": "A beautiful trailing plant that grows fast and survives in almost any lighting condition.",
+    "reviews": [
+      { "user": "Tanvir", "rating": 5, "comment": "Incredible growth in just two weeks!" }
+    ]
   },
-  { "id": 6,
-   "name": "ZZ Plant",
-   "price": 18,
-   "category": "indoor",
-    "image": "https://images.unsplash.com/photo-1632205514631-f1556819b162?q=80&w=400"
-   },
-  { "id": 7, 
-  "name": "Spider Plant", 
-  "price": 15,
-  "category": "indoor",
-   "image": "https://images.unsplash.com/photo-1572688484438-313a6e50c333?q=80&w=400"
-   },
-  { "id": 8, 
-  "name": "Parlor Palm",
-   "price": 22,
-    "category": "indoor", 
-    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=400" 
+  {
+    "id": 104,
+    "name": "Calathea Orbifolia",
+    "category": "indoor",
+    "subCategory": "purifying",
+    "price": 29.99,
+    "image": "https://images.unsplash.com/photo-1545167622-3a6ac756afa4?w=500",
+    "description": "Features beautiful oversized leaves with distinct geometric stripes. Loves moisture.",
+    "reviews": [
+      { "user": "Rifat", "rating": 4, "comment": "Beautiful stripes, but needs high humidity to stay perfect." }
+    ]
   },
-  { "id": 9,
-   "name": "Boston Fern",
-    "price": 16, 
-    "category": "indoor", 
-    "image": "https://images.unsplash.com/photo-1512428813824-f713c2410b33?q=80&w=400"
-   },
-  { "id": 10,
-   "name": "Cast Iron Plant",
-    "price": 25, 
-    "category": "indoor", 
-    "image": "https://images.unsplash.com/photo-1592150621744-aca64f48394a?q=80&w=400"
-   },
-
-  { "id": 11,
-   "name": "Aloe Vera",
-    "price": 14, 
-    "category": "purifying",
-    "image": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=400"
-   },
-  { "id": 12, 
-  "name": "English Ivy",
-   "price": 18, 
-   "category": "purifying", 
-   "image": "https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=400" 
+  {
+    "id": 105,
+    "name": "Peace Lily",
+    "category": "indoor",
+    "subCategory": "purifying",
+    "price": 18.50,
+    "image": "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=500",
+    "description": "Produces elegant white blooms and is top-tier for removing airborne toxins.",
+    "reviews": [
+      { "user": "Sadia", "rating": 5, "comment": "Flowered within a week! Love it." }
+    ]
   },
-  { "id": 13,
-   "name": "Rubber Plant",
-    "price": 28,
-     "category": "purifying", 
-     "image": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=400"
-   },
-  { "id": 14,
-   "name": "Dracaena", 
-   "price": 24,
-    "category": "purifying", 
-    "image": "https://images.unsplash.com/photo-1597055181300-e3633a207518?q=80&w=400" 
+  {
+    "id": 106,
+    "name": "Fiddle Leaf Fig",
+    "category": "indoor",
+    "subCategory": "decorative",
+    "price": 45.00,
+    "image": "https://images.unsplash.com/photo-1597055181300-e3633a207518?w=500",
+    "description": "An iconic indoor tree with large, heavily veined leaves.",
+    "reviews": []
   },
-  { "id": 15,
-  "name": "Weeping Fig", 
-  "price": 35,
-   "category": "purifying",
-    "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?q=80&w=400"
-   },
-  { "id": 16,
-   "name": "Chrysanthemum",
-    "price": 19,
-     "category": "purifying",
-     "image": "https://images.unsplash.com/photo-1632205514631-f1556819b162?q=80&w=400"
-     },
-  { "id": 17, 
-  "name": "Bamboo Palm", 
-  "price": 32, 
-  "category": "purifying", 
-  "image": "https://images.unsplash.com/photo-1572688484438-313a6e50c333?q=80&w=400" 
-},
-  { "id": 18,
-   "name": "Broadleaf Lady Palm", 
-   "price": 40, 
-   "category": "purifying",
-    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=400"
-   },
-  { "id": 19, 
-  "name": "Chinese Evergreen",
-   "price": 22, 
-   "category": "purifying",
-    "image": "https://images.unsplash.com/photo-1512428813824-f713c2410b33?q=80&w=400" 
+  {
+    "id": 107,
+    "name": "ZZ Plant",
+    "category": "indoor",
+    "subCategory": "purifying",
+    "price": 22.00,
+    "image": "https://images.unsplash.com/photo-1632245889029-e406faaa34cd?w=500",
+    "description": "Thrives on neglect. Perfect for low light and forgetful waterers.",
+    "reviews": []
   },
-  { "id": 20,
-   "name": "Gerbera Daisy", 
-   "price": 15, 
-   "category": "purifying",
-    "image": "https://images.unsplash.com/photo-1592150621744-aca64f48394a?q=80&w=400" },
-
-  { "id": 21,
-   "name": "Fiddle Leaf Fig", 
-   "price": 45, 
-   "category": "decorative", 
-   "image": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=400"
-   },
-  { "id": 22,
-   "name": "Bird of Paradise",
-    "price": 50,
-     "category": "decorative", 
-     "image": "https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=400" 
-    },
-  { "id": 23,
-   "name": "Calathea Orbifolia",
-    "price": 26,
-     "category": "decorative",
-      "image": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=400" 
-    },
-  { "id": 24, 
-  "name": "String of Pearls", 
-  "price": 20,
-   "category": "decorative", 
-   "image": "https://images.unsplash.com/photo-1597055181300-e3633a207518?q=80&w=400"
-   },
-  { "id": 25,
-   "name": "African Violet", 
-   "price": 18, 
-   "category":"decorative",
-    "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?q=80&w=400" 
+  {
+    "id": 108,
+    "name": "Aloe Vera",
+    "category": "indoor",
+    "subCategory": "purifying",
+    "price": 12.00,
+    "image": "https://images.unsplash.com/photo-1596547610014-9b2f4f25ca31?w=500",
+    "description": "A succulent species famous for its soothing medicinal gel.",
+    "reviews": []
   },
-  { "id": 26, "name": "Anthurium", "price": 29, "category": "decorative", "image": "https://images.unsplash.com/photo-1632205514631-f1556819b162?q=80&w=400" },
-  { "id": 27, "name": "Croton", "price": 21, "category": "decorative", "image": "https://images.unsplash.com/photo-1572688484438-313a6e50c333?q=80&w=400" },
-  { "id": 28, "name": "Begonia Maculata", "price": 27, "category": "decorative", "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=400" },
-  { "id": 29, "name": "Polka Dot Plant", "price": 14, "category": "decorative", "image": "https://images.unsplash.com/photo-1512428813824-f713c2410b33?q=80&w=400" },
-  { "id": 30, "name": "Peperomia Argyreia", "price": 17, "category": "decorative", "image": "https://images.unsplash.com/photo-1592150621744-aca64f48394a?q=80&w=400" }
+  {
+    "id": 109,
+    "name": "Boston Fern",
+    "category": "indoor",
+    "subCategory": "purifying",
+    "price": 16.00,
+    "image": "https://images.unsplash.com/photo-1545241047-6083a3684587?w=500",
+    "description": "Lush green fronds that look amazing in hanging baskets.",
+    "reviews": []
+  },
+  {
+    "id": 110,
+    "name": "Spider Plant",
+    "category": "indoor",
+    "subCategory": "purifying",
+    "price": 14.00,
+    "image": "https://images.unsplash.com/photo-1572591605658-006bd16d2b63?w=500",
+    "description": "Easy to grow, produces tiny plantlets that hang down like spiders.",
+    "reviews": []
+  },
+  {
+    "id": 111,
+    "name": "Lavender",
+    "category": "indoor",
+    "subCategory": "decorative",
+    "price": 19.00,
+    "image": "https://images.unsplash.com/photo-1528826722302-d6084efee14a?w=500",
+    "description": "Beautiful purple flowers with a calming, aromatic scent.",
+    "reviews": []
+  },
+  {
+    "id": 112,
+    "name": "English Ivy",
+    "category": "indoor",
+    "subCategory": "purifying",
+    "price": 13.50,
+    "image": "https://images.unsplash.com/photo-1580196969807-cc6de06c05be?w=500",
+    "description": "An evergreen climbing vine that effectively clears air impurities.",
+    "reviews": []
+  },
+  {
+    "id": 113,
+    "name": "Cast Iron Plant",
+    "category": "indoor",
+    "subCategory": "decorative",
+    "price": 26.00,
+    "image": "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?w=500",
+    "description": "Virtually indestructible. Survives in dark corners with little water.",
+    "reviews": []
+  },
+  {
+    "id": 114,
+    "name": "Rubber Plant",
+    "category": "indoor",
+    "subCategory": "decorative",
+    "price": 28.00,
+    "image": "https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=500",
+    "description": "Features striking, glossy burgundy-tinted large oval leaves.",
+    "reviews": []
+  },
+  {
+    "id": 115,
+    "name": "Bird of Paradise",
+    "category": "outdoor",
+    "subCategory": "decorative",
+    "price": 55.00,
+    "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=500",
+    "description": "A large dramatic plant with unique banana-like leaves.",
+    "reviews": []
+  },
+  {
+    "id": 116,
+    "name": "Chinese Evergreen",
+    "category": "indoor",
+    "subCategory": "purifying",
+    "price": 20.00,
+    "image": "https://images.unsplash.com/photo-1616690710400-a16d146927c5?w=500",
+    "description": "Patterned silver-green leaves that tolerate dry indoor air perfectly.",
+    "reviews": []
+  },
+  {
+    "id": 117,
+    "name": "Areca Palm",
+    "category": "indoor",
+    "subCategory": "purifying",
+    "price": 38.00,
+    "image": "https://images.unsplash.com/photo-1512428813834-c702c7702b78?w=500",
+    "description": "A beautiful feathery palm that acts as a natural indoor humidifier.",
+    "reviews": []
+  },
+  {
+    "id": 118,
+    "name": "Jade Plant",
+    "category": "indoor",
+    "subCategory": "decorative",
+    "price": 15.50,
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500",
+    "description": "A popular good-luck succulent with thick, woody stems.",
+    "reviews": []
+  },
+  {
+    "id": 119,
+    "name": "Red Robin Bonsai",
+    "category": "indoor",
+    "subCategory": "decorative",
+    "price": 60.00,
+    "image": "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=500",
+    "description": "An expertly pruned miniature tree with vibrant red spring leaves.",
+    "reviews": []
+  },
+  {
+    "id": 120,
+    "name": "String of Pearls",
+    "category": "indoor",
+    "subCategory": "decorative",
+    "price": 17.00,
+    "image": "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=500",
+    "description": "A unique cascading succulent resembling green beaded necklaces.",
+    "reviews": []
+  },
+  {
+    "id": 121,
+    "name": "Majesty Palm",
+    "category": "outdoor",
+    "subCategory": "decorative",
+    "price": 42.00,
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=500",
+    "description": "A classic tropical palm that loves bright light and moist soil.",
+    "reviews": []
+  },
+  {
+    "id": 122,
+    "name": "Lemon Button Fern",
+    "category": "indoor",
+    "subCategory": "decorative",
+    "price": 11.00,
+    "image": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=500",
+    "description": "Compact fern with cute round leaves that emit a faint lemony scent.",
+    "reviews": []
+  },
+  {
+    "id": 123,
+    "name": "Anthurium",
+    "category": "indoor",
+    "subCategory": "decorative",
+    "price": 25.00,
+    "image": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500",
+    "description": "Features shiny heart-shaped red spathes that bloom year-round.",
+    "reviews": []
+  },
+  {
+    "id": 124,
+    "name": "Flaming Katy",
+    "category": "door",
+    "subCategory": "purifying",
+    "price": 13.00,
+    "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=500",
+    "description": "A colorful flowering succulent available in brilliant warm shades.",
+    "reviews": []
+  },
+  {
+    "id": 125,
+    "name": "Swiss Cheese Vine",
+    "category": "indoor",
+    "subCategory": "decorative",
+    "price": 18.00,
+    "image": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=500",
+    "description": "The climbing cousin of Monstera, perfect for moss poles.",
+    "reviews": []
+  },
+  {
+    "id": 126,
+    "name": "Neanthe Bella Palm",
+    "category": "indoor",
+    "subCategory": "purifying",
+    "price": 16.50,
+    "image": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=500",
+    "description": "Also known as Parlor Palm, thrives in tight spaces and low light.",
+    "reviews": []
+  },
+  {
+    "id": 127,
+    "name": "Echeveria Rosette",
+    "category": "outdoor",
+    "subCategory": "decorative",
+    "price": 8.00,
+    "image": "https://images.unsplash.com/photo-1520302832304-27eb334fc6ba?w=500",
+    "description": "Stunning rose-shaped blue-green succulent that loves direct sun.",
+    "reviews": []
+  },
+  {
+    "id": 128,
+    "name": "Croton Petra",
+    "category": "outdoor",
+    "subCategory": "decorative",
+    "price": 21.00,
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500",
+    "description": "Boasts dramatic autumn-colored leaves with bold yellow veins.",
+    "reviews": []
+  },
+  {
+    "id": 129,
+    "name": "Maidenhair Fern",
+    "category": "indoor",
+    "subCategory": "purifying",
+    "price": 19.50,
+    "image": "https://images.unsplash.com/photo-1545241047-6083a3684587?w=500",
+    "description": "Features delicate, lacy fronds. Demands consistent moisture.",
+    "reviews": []
+  },
+  {
+    "id": 130,
+    "name": "Maranta Prayer Plant",
+    "category": "indoor",
+    "subCategory": "decorative",
+    "price": 23.00,
+    "image": "https://images.unsplash.com/photo-1545167622-3a6ac756afa4?w=500",
+    "description": "Leaves fold up like praying hands at night. Beautiful red veins.",
+    "reviews": []
+  }
 ]

@@ -1,4 +1,6 @@
-/* Base Setup */
+/* ==========================================
+   Base Setup & Reset
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -7,36 +9,40 @@
 }
 
 body {
-    background-color: #F3F1EA; /* Soft Warm Gray/Beige from image */
+    background-color: #F3F1EA; /* Soft Warm Gray/Beige */
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* HEADER */
+/* ==========================================
+   HEADER
+   ========================================== */
 .main-header {
     background-color: #FAF8F5;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 15px 4%;
     border-bottom: 1px solid #E4E0D5;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
     font-size: 24px;
     font-weight: bold;
-    color: #4A6B42; /* Main Green Brand Color */
+    color: #4A6B42;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #444;
-    margin: 0 15px;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -45,177 +51,389 @@ body {
     color: #4A6B42;
 }
 
-.header-icons {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: 20px;
-    color: #444;
-    cursor: pointer;
-}
-
-.cart-icon {
-    position: relative;
-}
-
-.badge {
-    position: absolute;
-    top: -8px;
-    right: -10px;
-    background-color: #D9534F;
-    color: white;
-    font-size: 11px;
-    padding: 2px 6px;
-    border-radius: 50%;
-}
-
-/* CONTAINER */
-.dashboard-container {
-    display: flex;
+/* ==========================================
+   MAIN DASHBOARD WRAPPER (4 দিকে উইডথ বাড়ানো হয়েছে)
+   ========================================== */
+.dashboard-bg-wrapper {
     flex: 1;
-    width: 95%;
-    max-width: 1400px;
-    margin: 25px auto;
-    background: #FAF8F5;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 100%;
+    padding: 10px 15px; /* চারপাশের গ্যাপ কমানো হয়েছে */
+    display: flex;
+    align-items: stretch;
 }
 
-/* SIDEBAR (Dark Green Request) */
-.sidebar {
-    width: 260px;
+.main-dashboard-card {
+    display: flex;
+    width: 100%;
+    max-width: 100px; /* স্ক্রিনের ৪ দিকে ম্যাক্সিমাম উইডথ ছড়ানোর জন্য */
+    margin: 10px auto;
+    min-height: 1000px; /* ড্যাশবোর্ডের হাইট বাড়ানো হয়েছে */
+    background: #FAF8F5;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+}
+
+/* ==========================================
+   SIDEBAR (gn-sidebar)
+   ========================================== */
+.gn-sidebar {
+    width: 290px; /* সাইডবার চওড়া করা হয়েছে */
     background-color: #1E3F20; /* Dark Green */
     color: #E2E8F0;
-    padding: 30px 0;
+    padding: 35px 0;
     display: flex;
     flex-direction: column;
 }
 
-.user-profile {
+.profile-box {
     text-align: center;
     padding: 0 20px 25px 20px;
     border-bottom: 1px solid #2A542D;
 }
 
-.avatar-placeholder {
-    width: 90px;
-    height: 90px;
-    background-color: #2A542D;
-    border-radius: 50%;
+.avatar-wrapper {
+    position: relative;
+    width: 95px;
+    height: 95px;
     margin: 0 auto 15px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 35px;
-    color: #A2C59D;
+}
+
+.user-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
     border: 3px solid #3B6E3F;
 }
 
-.user-profile h3 {
+.status-online {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #2ecc71;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #1E3F20;
+}
+
+.user-name {
     font-size: 18px;
     color: #FFF;
     margin-bottom: 5px;
 }
 
-.user-profile p {
+.user-email {
     font-size: 13px;
     color: #A2C59D;
 }
 
-.nav-menu {
+.user-badge {
+    background: rgba(162, 197, 157, 0.2);
+    color: #A2C59D;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+/* SIDEBAR NAV MENU */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.nav-vertical-stack {
     list-style: none;
     margin-top: 20px;
 }
 
-.nav-menu li a {
+.menu-item a {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 15px 25px;
+    padding: 16px 25px;
     color: #C8D6C7;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s;
 }
 
-.nav-menu li a:hover, 
-.nav-menu li a.active {
+.menu-item:hover a, 
+.menu-item.active a {
     background-color: #2A542D;
     color: #FFF;
     border-left: 4px solid #A2C59D;
 }
 
-/* MAIN CONTENT */
-.main-content {
-    flex: 1;
-    padding: 40px;
-    background-image: linear-gradient(to bottom right, rgba(255,255,255,0.8), rgba(245,242,235,0.5));
+.logout-item {
+    padding: 20px 25px;
+    border-top: 1px solid #2A542D;
 }
 
-.welcome-section h2 {
-    font-family: 'Georgia', serif;
-    font-style: italic;
-    color: #1E3F20;
-    font-size: 28px;
-    margin-bottom: 8px;
-}
-
-.welcome-section p {
-    color: #666;
-    font-size: 15px;
-    margin-bottom: 30px;
-}
-
-/* SIGNUP CARD */
-.signup-card {
-    background: #FFF;
-    border: 1px solid #E4E0D5;
-    border-radius: 8px;
-    padding: 30px;
-    max-width: 650px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-}
-
-.signup-card h3 {
-    color: #333;
-    font-size: 18px;
+.logout-link {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: 600;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.divider {
-    border: 0;
-    height: 1px;
-    background: #E4E0D5;
-    margin: 15px 0 25px 0;
-}
-
-/* FORM ELEMENTS */
-.form-group {
-    margin-bottom: 20px;
+/* ==========================================
+   MAIN CONTENT AREA
+   ========================================== */
+.gn-content {
     flex: 1;
+    padding: 40px 50px;
+    background: #FFF;
 }
 
-.form-row {
-    display: flex;
-    gap: 20px;
+.tab-content {
+    display: none;
 }
 
-label {
+.tab-content.active {
     display: block;
+}
+
+/* PREMIUM WELCOME BANNER */
+.welcome-banner {
+    background: linear-gradient(135deg, #1E3F20 0%, #3B6E3F 100%);
+    color: white;
+    padding: 50px;
+    border-radius: 16px;
+    margin-bottom: 20
+    55px;
+    box-shadow: 0 4px 15px rgba(30,63,32,0.12);
+}
+
+.welcome-banner h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.welcome-banner p {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+/* STATS ROW CARD GRID */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 80px;
+    margin-bottom: 50px;
+}
+
+.stat-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 22px;
+    border-radius: 12px;
+    background: #FAF8F5;
+    border: 1px solid #E4E0D5;
+}
+
+.stat-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.brown-box .stat-img { background: #efebe9; color: #8d6e63; }
+.green-box .stat-img { background: #e8f5e9; color: #66bb6a; }
+.red-box .stat-img { background: #ffebee; color: #ef5350; }
+.yellow-box { background: #fffde7; border: 1px solid #fff59d; }
+.yellow-box .stat-img { background: #fbc02d; color: white; }
+
+.stat-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-data .label {
+    font-size: 13px;
+    color: #666;
+}
+
+.stat-data .value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bonus-text {
+    color: #f57f17;
+}
+
+/* ONBOARDING & PROMO GRID */
+.sections-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+}
+
+.inner-card {
+    padding: 30px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid #E4E0D5;
+}
+
+.section-title {
+    font-size: 19px;
+    color: #1E3F20;
+    margin-bottom: 20px;
+}
+
+/* CHECKLIST */
+.checklist-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.checklist-items li {
+    font-size: 14px;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.checklist-items .checked-item {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+/* PROMO OFFERS CARD */
+.promo-card {
+    background: linear-gradient(to bottom, #FAF8F5, #F3F1EA);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px dashed #4A6B42;
+}
+
+.promo-tag {
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.promo-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.promo-code {
+    color: #4A6B42;
+    background: #fff;
+    padding: 2px 6px;
+    border: 1px solid #E4E0D5;
+    border-radius: 4px;
+}
+
+/* BUTTONS BUTTONS */
+.btn-green-solid {
+    background-color: #4A6B42;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-green-solid:hover {
+    background-color: #3B5634;
+}
+
+.btn-action-light {
+    width: 100%;
+    margin-top: 20px;
+    background: #fff;
+    border: 1px solid #4A6B42;
+    color: #4A6B42;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-action-light:hover {
+    background: #4A6B42;
+    color: white;
+}
+
+/* EMPTY STATES (Orders, Wishlist, Plants Tabs) */
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.empty-state i {
+    font-size: 58px;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.empty-state p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+/* ==========================================
+   SETTINGS TAB FORM
+   ========================================== */
+.settings-subtitle {
+    margin-bottom: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+.settings-grid-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
     font-size: 13px;
     font-weight: 600;
-    margin-bottom: 8px;
     color: #555;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+.form-group input {
     width: 100%;
-    padding: 12px;
+    padding: 13px;
     border: 1px solid #D1C9BC;
     border-radius: 6px;
     background-color: #FAF9F6;
@@ -223,82 +441,104 @@ input[type="password"] {
     transition: all 0.3s;
 }
 
-input:focus {
+.form-group input:focus {
     outline: none;
     border-color: #4A6B42;
     background-color: #FFF;
     box-shadow: 0 0 0 3px rgba(74, 107, 66, 0.1);
 }
 
-.form-checkbox {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 25px 0;
-    font-size: 13px;
-    color: #666;
+.disabled-input {
+    background: #f1f5f9 !important;
+    cursor: not-allowed;
+    color: #94a3b8;
 }
 
-.form-checkbox span {
-    color: #4A6B42;
-    cursor: pointer;
-    text-decoration: underline;
+.btn-save {
+    margin-top: 30px;
+    width: auto;
 }
 
-/* BUTTON */
-.btn-signup {
-    width: 100%;
-    background-color: #4A6B42; /* Soft Green Button */
-    color: white;
-    border: none;
-    padding: 14px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn-signup:hover {
-    background-color: #3B5634;
-}
-
-.form-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666;
-}
-
-.form-footer a {
-    color: #4A6B42;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-/* FOOTER */
-.main-footer {
-    text-align: center;
-    padding: 20px;
+/* ==========================================
+   BEAUTIFUL FOOTER
+   ========================================== */
+.beautiful-footer {
     background-color: #FAF8F5;
     border-top: 1px solid #E4E0D5;
+    padding: 40px 5% 20px 5%;
+    margin-top: auto;
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3, .footer-section h4 {
+    color: #1E3F20;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-section a:hover {
+    color: #4A6B42;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    font-size: 18px;
+    color: #4A6B42;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #E4E0D5;
+    padding-top: 20px;
     font-size: 13px;
     color: #888;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .dashboard-container {
+/* ==========================================
+   RESPONSIVE DESIGN (Responsive Breakpoints)
+   ========================================== */
+@media (max-width: 992px) {
+    .main-dashboard-card {
         flex-direction: column;
-        width: 100%;
         margin: 0;
         border-radius: 0;
     }
-    .sidebar {
+    .gn-sidebar {
         width: 100%;
     }
-    .form-row {
-        flex-direction: column;
-        gap: 0;
+    .sections-grid {
+        grid-template-columns: 1fr;
+    }
+    .settings-grid-fields {
+        grid-template-columns: 1fr;
     }
 }

@@ -91,13 +91,16 @@
   </footer>
 
   <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // ফর্মের ডিফল্ট সাবমিট (পেজ রিফ্রেশ) আটকাবে
-      
-      // লগইন সফল হলে সরাসরি dashboard.html পেজে নিয়ে যাবে
-      window.location.href = "dashboard.html";
-    });
-  </script>
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Login হয়েছে সেটা save করবে
+    localStorage.setItem("loggedIn", "true");
+
+    // Dashboard এ যাবে
+    window.location.href = "dashboard.html";
+});
+</script>
 
 </body>
 </html>

@@ -64,14 +64,14 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 4%;
+  padding: 50px 2%;
 }
 
 .main-dashboard-card {
   background-color: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   width: 100%;
-  max-width: 1140px;
+  max-width: 1400px;
   border-radius: 16px;
   display: flex;
   box-shadow: 0 15px 35px rgba(27, 67, 50, 0.12);

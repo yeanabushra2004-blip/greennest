@@ -5,12 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenNest - Categories</title>
     <link rel="stylesheet" href="categories.css">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* আপনার অরিজিনাল হেডার ঠিক রাখতে এই ছোট CSS গুলো যোগ করুন */
+        .hero-greetings {
+            background: linear-gradient(rgba(45, 90, 39, 0.8), rgba(45, 90, 39, 0.8)), 
+                        url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .hero-content h1 { font-size: 3rem; margin-bottom: 15px; }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 30px; }
+        .cta-button {
+            padding: 12px 30px;
+            background-color: #ffffff;
+            color: #2d5a27;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        .cta-button:hover { background-color: #e8f5e9; transform: scale(1.05); }
+    </style>
 </head>
 <body>
 
-    <!-- Header Section (Interconnected Links) -->
+    <!-- হেডার -->
     <header class="navbar">
         <div class="logo"><span class="logo-icon">🌿</span> GreenNest</div>
         <nav>
@@ -24,38 +48,37 @@
         </nav>
     </header>
 
-    <!-- Breadcrumb & Title Section -->
+    <!-- গ্রিটিংস বা হিরো সেকশন -->
+    <section class="hero-greetings">
+        <div class="hero-content">
+            <h1>Bring Nature Into Your Living Space</h1>
+            <p>Discover our curated collection of indoor plants to refresh your home and mind.</p>
+            <a href="#product-grid" class="cta-button">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- অরিজিনাল টাইটেল সেকশন -->
     <section class="page-title-section">
-        <div class="container">
+        <div class="container" id="title-container">
             <p class="breadcrumb">Home / <span id="current-crumb">Indoor Plants</span></p>
             <h1 id="page-heading">Indoor Plants</h1>
             <p id="page-subtitle" class="subtitle">A variety of indoor plants perfect for adding greenery to your space.</p>
         </div>
     </section>
 
-    <!-- Main Layout -->
     <main class="main-container">
-        <!-- Sidebar Filter -->
         <aside class="sidebar">
             <h3>Filter by:</h3>
             <ul class="filter-list">
-                <li class="filter-item active" data-category="indoor">
-                    <span class="radio-icon"><i class="fas fa-check-circle"></i></span> Indoor Plants
-                </li>
-                <li class="filter-item" data-category="purifying">
-                    <span class="radio-icon"><i class="far fa-circle"></i></span> Air Purifying
-                </li>
-                <li class="filter-item" data-category="decorative">
-                    <span class="radio-icon"><i class="far fa-circle"></i></span> Decorative
-                </li>
+                <li class="filter-item active" data-category="indoor"><span class="radio-icon"><i class="fas fa-circle"></i></span> Indoor Plants</li>
+                <li class="filter-item" data-category="Purifying"><span class="radio-icon"><i class="far fa-circle"></i></span> Air Purifying</li>
+                <li class="filter-item" data-category="decorative"><span class="radio-icon"><i class="far fa-circle"></i></span> Decorative</li>
             </ul>
         </aside>
-
-        <!-- Dynamic Product Grid -->
         <section id="product-grid" class="product-grid"></section>
     </main>
 
-    <!-- Your Beautiful Footer Bar -->
+    <!-- ফুটার -->
     <footer class="beautiful-footer">
         <div class="footer-wrap">
             <div class="footer-section brand-info">
@@ -85,7 +108,6 @@
         </div>
     </footer>
 
-    <!-- Script Connection -->
     <script src="script cat.js"></script>
 </body>
 </html>

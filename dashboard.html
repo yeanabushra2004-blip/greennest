@@ -136,33 +136,158 @@
               <button class="btn-action-light" onclick="switchTab('orders')">View Full History</button>
             </div>
           </div>
+
+          <!-- NEW WIDE GRID FOR EXPANDED LAYOUT -->
+          <div class="sections-grid" style="margin-top: 25px;">
+            <!-- Care Reminders -->
+            <div class="inner-card">
+              <h2 class="section-title">💧 Care Schedule & Reminders</h2>
+              <div class="orders-stack">
+                <div class="order-row-item" style="border-left: 4px solid #2e7d32; cursor: default;">
+                  <div class="order-text">
+                    <span class="order-title">Watering Due: Snake Plant</span>
+                    <span class="order-sub">Needs 200ml water • Scheduled for Today</span>
+                  </div>
+                  <button class="btn-green-solid" style="padding: 6px 12px; font-size: 12px; height: fit-content;" onclick="alert('Marked as watered!')">Mark Done</button>
+                </div>
+                <div class="order-row-item" style="border-left: 4px solid #b7791f; cursor: default;">
+                  <div class="order-text">
+                    <span class="order-title">Fertilizer Boost: Anthurium</span>
+                    <span class="order-sub">Organic liquid mixture • In 2 days</span>
+                  </div>
+                  <span class="status-badge processing" style="background: #e0f2fe; color: #0369a1;">Upcoming</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Garden Insights -->
+            <div class="inner-card">
+              <h2 class="section-title">📊 Green Insights</h2>
+              <div style="font-size: 13px; color: #444; line-height: 1.6;">
+                <p style="margin-bottom: 12px;">🌟 <strong>Tip of the Week:</strong> Your Anthurium loves indirect sunlight. If the leaves turn yellow, try moving it 2 feet away from the window.</p>
+                <div style="background: #f0f7f0; padding: 12px; border-radius: 8px; border: 1px dashed #276749;">
+                  <span style="font-weight: 600; color: #276749; display: block; margin-bottom: 4px;">🌱 Oxygen Impact</span>
+                  Your current home collection produces approximately 1.2kg of clean oxygen per month!
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- TAB 2: ORDERS -->
         <div id="tab-orders" class="tab-content">
-          <h2 class="section-title">Order History</h2>
+          <h2 class="section-title">Order History & Tracking</h2>
+          
+          <!-- Active Order with Tracking -->
+          <div class="inner-card" style="margin-bottom: 25px; background: #fff;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <h3 style="font-size: 16px; color: #1b4332;">Order #1024 — In Transit</h3>
+                <p style="font-size: 12px; color: #666;">Placed on April 15, 2026 • Payment: Visa Card</p>
+              </div>
+              <span class="status-badge processing" style="height: fit-content;">Est. Delivery: April 19</span>
+            </div>
+            
+            <!-- Simple Visual Tracker -->
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-top: 1px solid #e2e8f0;">
+              <span style="font-size: 12px; font-weight: 600; color: #2e7d32;"><i class="fas fa-check-circle"></i> Packed</span>
+              <div style="flex: 1; height: 4px; background: #2e7d32; margin: 0 15px;"></div>
+              <span style="font-size: 12px; font-weight: 600; color: #2e7d32;"><i class="fas fa-truck"></i> Shipped</span>
+              <div style="flex: 1; height: 4px; background: #cbd5e1; margin: 0 15px;"></div>
+              <span style="font-size: 12px; font-weight: 600; color: #94a3b8;"><i class="fas fa-home"></i> Out for Delivery</span>
+            </div>
+          </div>
+
+          <!-- Past Orders List -->
+          <h3 style="font-size: 16px; margin-bottom: 12px; color: #1b4332;">Past Purchases</h3>
           <div class="orders-stack">
             <div class="order-row-item">
-              <div class="order-text"><span class="order-title">#1024 - Processing</span><span class="order-sub">Anthurium, Snake Plant — Total: $35.00</span></div>
-              <span class="status-badge processing">In Transit</span>
+              <div class="order-text">
+                <span class="order-title">#0982 - Delivered Successfully</span>
+                <span class="order-sub">Monstera Deliciosa, Ceramic Pot — Total: $48.50 • Feb 12, 2026</span>
+              </div>
+              <span class="status-badge" style="background: #d1fae5; color: #065f46;">Delivered</span>
+            </div>
+            <div class="order-row-item">
+              <div class="order-text">
+                <span class="order-title">#0911 - Delivered Successfully</span>
+                <span class="order-sub">Succulent Trio Pack — Total: $19.00 • Jan 05, 2026</span>
+              </div>
+              <span class="status-badge" style="background: #d1fae5; color: #065f46;">Delivered</span>
             </div>
           </div>
         </div>
 
         <!-- TAB 3: WISHLIST -->
         <div id="tab-wishlist" class="tab-content">
-          <h2 class="section-title">My Saved Wishlist</h2>
-          <p style="margin-bottom: 20px; color: #555;">You have 8 beautiful plants saved in your wishlist.</p>
-          <button class="btn-green-solid" onclick="window.location.href='categories.html'">Go To Shop</button>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+            <div>
+              <h2 class="section-title" style="margin-bottom: 0;">My Saved Wishlist</h2>
+              <p style="color: #555; font-size: 13px;">You have 8 beautiful plants saved for later.</p>
+            </div>
+            <button class="btn-green-solid" onclick="window.location.href='categories.html'">Shop All Categories</button>
+          </div>
+          
+          <div class="sections-grid">
+            <!-- Wishlist Item 1 -->
+            <div class="order-row-item" style="padding: 15px;">
+              <div style="display: flex; gap: 15px; align-items: center;">
+                <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=150" style="width: 60px; height: 60px; border-radius: 8px; object-fit: cover;">
+                <div>
+                  <span class="order-title" style="font-size: 15px;">Calathea Orbifolia</span>
+                  <span class="order-sub" style="display: block; margin-top: 2px; color: #2e7d32; font-weight: 600;">$24.99</span>
+                </div>
+              </div>
+              <button class="btn-green-solid" style="padding: 8px 14px; font-size: 12px;"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            </div>
+
+            <!-- Wishlist Item 2 -->
+            <div class="order-row-item" style="padding: 15px;">
+              <div style="display: flex; gap: 15px; align-items: center;">
+                <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=150" style="width: 60px; height: 60px; border-radius: 8px; object-fit: cover;">
+                <div>
+                  <span class="order-title" style="font-size: 15px;">Fiddle Leaf Fig</span>
+                  <span class="order-sub" style="display: block; margin-top: 2px; color: #2e7d32; font-weight: 600;">$39.99</span>
+                </div>
+              </div>
+              <button class="btn-green-solid" style="padding: 8px 14px; font-size: 12px;"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            </div>
+          </div>
         </div>
 
         <!-- TAB 4: MY PLANTS -->
         <div id="tab-plants" class="tab-content">
           <h2 class="section-title">My Plant Collection</h2>
-          <p style="color: #555;">You currently own 5 healthy plants. Keep up the green thumb!</p>
+          <p style="color: #555; margin-bottom: 25px; font-size: 13px;">Track the growth progress and health metrics of your home greenhouse.</p>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;">
+            <!-- Plant 1 -->
+            <div class="inner-card" style="text-align: center; background: #fff;">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCqL6T5bFUEerr4qejUL94zPzx0y5tqx6mSLUVjXVXd8G2Nk4eTSEW5CfSY4eZfj5nweiBjq5TTMn1PMEtenz-HNyvsUdBshJMQ__mg01CzQ&s=10" style="width: 100%; height: 130px; object-fit: cover; border-radius: 8px;">
+              <h4 style="margin: 10px 0 4px; color: #1b4332;">Anthurium</h4>
+              <span class="status-badge" style="background: #d1fae5; color: #065f46;">Health: Excellent</span>
+              <p style="font-size: 11px; color: #666; margin-top: 8px;">Adopted: 3 Months ago</p>
+            </div>
+
+            <!-- Plant 2 -->
+            <div class="inner-card" style="text-align: center; background: #fff;">
+              <img src="https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=200" style="width: 100%; height: 130px; object-fit: cover; border-radius: 8px;">
+              <h4 style="margin: 10px 0 4px; color: #1b4332;">Snake Plant</h4>
+              <span class="status-badge" style="background: #d1fae5; color: #065f46;">Health: Perfect</span>
+              <p style="font-size: 11px; color: #666; margin-top: 8px;">Adopted: 5 Months ago</p>
+            </div>
+
+            <!-- Plant 3 -->
+            <div class="inner-card" style="text-align: center; background: #fff;">
+              <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=150" style="width: 100%; height: 130px; object-fit: cover; border-radius: 8px;">
+              <h4 style="margin: 10px 0 4px; color: #1b4332;">Monstera</h4>
+              <span class="status-badge" style="background: #fef3c7; color: #b45309;">Needs Sunlight</span>
+              <p style="font-size: 11px; color: #666; margin-top: 8px;">Adopted: 1 Week ago</p>
+            </div>
+          </div>
         </div>
 
-        <!-- TAB 5: ACCOUNT SETTINGS (MUST HAVE) -->
+        <!-- TAB 5: ACCOUNT SETTINGS -->
         <div id="tab-settings" class="tab-content">
           <h2 class="section-title">Account Settings</h2>
           <p class="settings-subtitle">Update your personal profile information, email address, and security details.</p>
@@ -194,6 +319,20 @@
                 <input type="password" placeholder="Confirm new password">
               </div>
             </div>
+
+            <!-- Additional Settings Group for Wide Screen Layouts -->
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
+              <h3 style="font-size: 16px; margin-bottom: 12px; color: #1b4332;">Email Notifications Setup</h3>
+              <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: #444;">
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                  <input type="checkbox" checked style="accent-color: #2e7d32;"> Send me weekly plant care tips and watering alerts.
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                  <input type="checkbox" checked style="accent-color: #2e7d32;"> Inform me about order dispatch tracking status via SMS/Email.
+                </label>
+              </div>
+            </div>
+
             <button type="submit" class="btn-green-solid" style="margin-top: 25px; padding: 12px 30px;">Save Changes</button>
           </form>
         </div>
