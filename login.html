@@ -94,10 +94,10 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Login হয়েছে সেটা save করবে
+    // Login successfully, set loggedIn to true in localStorage
     localStorage.setItem("loggedIn", "true");
 
-    // Dashboard এ যাবে
+    // Dashboard page redirect after login
     window.location.href = "dashboard.html";
 });
 </script>

@@ -15,7 +15,7 @@ body {
   color: #2b3a30;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* ফুটারকে সবসময় পেজের নিচে ধরে রাখবে */
+  min-height: 100vh; 
 }
 
 .container {
@@ -25,7 +25,7 @@ body {
 }
 
 /* ==========================================================================
-   ১. YOUR ORIGINAL HEADER (NAVBAR) STYLES
+   1. YOUR ORIGINAL HEADER (NAVBAR) STYLES
    ========================================================================== */
 header {
   display: flex;
@@ -72,7 +72,7 @@ nav a.active {
   color: #ffffff !important; 
 }
 
-/* লাল রঙের কার্ট নোটিফিকেশন ব্যাজ */
+/* cart badge */
 .cart-badge {
   background-color: #e53935;
   color: white;
@@ -85,7 +85,7 @@ nav a.active {
 }
 
 /* ==========================================================================
-   ২. BREADCRUMB & TITLE BANNER (FOR CATEGORIES & CART)
+   2. BREADCRUMB & TITLE BANNER (FOR CATEGORIES & CART)
    ========================================================================== */
 .page-title-section {
   background-color: #ffffff;
@@ -112,7 +112,7 @@ nav a.active {
 }
 
 /* ==========================================================================
-   ৩. SHOP CATEGORIES PAGE LAYOUT (SIDEBAR & 3-COLUMN GRID)
+   3. SHOP CATEGORIES PAGE LAYOUT (SIDEBAR & 3-COLUMN GRID)
    ========================================================================== */
 .main-container {
   display: grid;
@@ -171,7 +171,7 @@ nav a.active {
   font-size: 16px;
 }
 
-/* প্রোডাক্ট গ্রিড - ইমেজ অনুযায়ী পাশাপাশি ৩টি কলাম */
+/* product grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -179,7 +179,7 @@ nav a.active {
   align-content: start;
 }
 
-/* প্রোডাক্ট কার্ড ডিজাইন */
+/* product card design */
 .product-card {
   background-color: #ffffff;
   border-radius: 8px;
@@ -245,7 +245,7 @@ nav a.active {
 }
 
 /* ==========================================================================
-   ৪. CART PAGE STYLES (MATCHING IMAGE "WhatsApp Image 2026-07-02 at 20.28.57.jpeg")
+   4. CART PAGE STYLES
    ========================================================================== */
 .cart-container {
   max-width: 1200px;
@@ -329,7 +329,7 @@ nav a.active {
   color: #888;
 }
 
-/* কোয়ান্টিটি প্লাস-মাইনাস বক্স */
+/* quantity plus-minus box */
 .quantity-control {
   display: flex;
   align-items: center;
@@ -390,7 +390,7 @@ nav a.active {
   background: #e5e5e5;
 }
 
-/* ডানপাশের অর্ডার সামারি কার্ড ডিজাইন */
+/* order summary card */
 .order-summary-card {
   background-color: #ffffff;
   border-radius: 8px;
@@ -450,7 +450,7 @@ nav a.active {
 }
 
 /* ==========================================================================
-   ৫. CHECKOUT PAGE STYLES (FORM & INPUT FIELD DESIGN)
+   5. CHECKOUT PAGE STYLES (FORM & INPUT FIELD DESIGN)
    ========================================================================== */
 .checkout-page-container {
   max-width: 1200px;
@@ -506,7 +506,7 @@ nav a.active {
   border-color: #2e7d32;
 }
 
-/* পেমেন্ট রেডিও বক্স অপশনস */
+/* payment radio box option */
 .payment-methods {
   display: flex;
   gap: 20px;
@@ -558,7 +558,7 @@ nav a.active {
 }
 
 /* ==========================================================================
-   ৬. YOUR ORIGINAL BEAUTIFUL FOOTER STYLES
+   6. YOUR ORIGINAL BEAUTIFUL FOOTER STYLES
    ========================================================================== */
 .beautiful-footer {
   background-color: #2e7d32;
@@ -642,7 +642,7 @@ nav a.active {
 }
 
 /* ==========================================================================
-   ৭. RESPONSIVE MEDIA QUERIES (MOBILE FRIENDLY)
+   7. RESPONSIVE MEDIA QUERIES (MOBILE FRIENDLY)
    ========================================================================== */
 @media (max-width: 992px) {
   .main-container, .cart-wrapper, .checkout-wrapper {

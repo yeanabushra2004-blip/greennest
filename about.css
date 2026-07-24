@@ -52,7 +52,7 @@ nav a {
   transition: none !important;
 }
 
-/* একটিভ পেজ শেড ইফেক্ট */
+/*header page effect*/
 nav a:hover, 
 nav a.active {
   background-color: transparent !important;

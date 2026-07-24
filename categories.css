@@ -196,8 +196,8 @@ body {
    ========================================================================== */
 
 .beautiful-footer {
-  background-color: #2e7d32; /* ব্যাকগ্রাউন্ড সবুজ */
-  color: #ffffff; /* সব টেক্সট সাদা */
+  background-color: #2e7d32; 
+  color: #ffffff;
   padding: 60px 4% 20px 4%;
   margin-top: auto;
   width: 100%;
@@ -208,7 +208,7 @@ body {
   justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* হালকা বর্ডার */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 40px;
 }
 
@@ -216,22 +216,22 @@ body {
   font-size: 16px;
   margin-bottom: 20px;
   font-weight: 600;
-  color: #ffffff; /* হেডিং সাদা */
+  color: #ffffff; /* heading white */
 }
 
 .brand-info h3 {
   font-size: 22px;
   margin-bottom: 12px;
-  color: #ffffff; /* ব্র্যান্ড নাম সাদা */
+  color: #ffffff; /* brand name white */
 }
 
 .brand-info p {
-  color: #ffffff; /* প্যারাগ্রাফ সাদা */
+  color: #ffffff; /* paragraph white */
   opacity: 0.9;
 }
 
 .links ul li a {
-  color: #ffffff; /* লিঙ্ক সাদা */
+  color: #ffffff; /* link white */
   text-decoration: none;
   font-size: 14px;
   opacity: 0.8;
@@ -243,7 +243,7 @@ body {
   text-decoration: underline;
 }
 
-/* আইকনগুলো সাদা করার স্টাইল */
+/*icon white*/
 .social-icons {
   display: flex;
   gap: 15px;
@@ -252,11 +252,11 @@ body {
 .social-icon {
   width: 40px;
   height: 40px;
-  border: 1px solid #ffffff; /* সাদা বর্ডার */
+  border: 1px solid #ffffff; /*white border */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffffff; /* আইকন সাদা */
+  color: #ffffff; /*icon white*/
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -264,14 +264,14 @@ body {
 
 .social-icon:hover {
   background-color: #ffffff;
-  color: #2e7d32; /* হোভার করলে ব্যাকগ্রাউন্ড সাদা এবং আইকন সবুজ হবে */
+  color: #2e7d32; /*hover */
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 25px;
   font-size: 13px;
-  color: #ffffff; /* কপিরাইট টেক্সট সাদা */
+  color: #ffffff; 
   opacity: 0.8;
 }
 /* Responsive */

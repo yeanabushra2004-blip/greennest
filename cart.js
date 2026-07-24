@@ -1,3 +1,9 @@
+const isLoggedIn = localStorage.getItem("loggedIn");
+
+if (!isLoggedIn) {
+    alert("Please login first.");
+    window.location.href = "login.html";
+}
 // ডাইনামিক কার্ট আইটেমের অ্যারে ডাটা
 let cartData = [
     {
@@ -109,14 +115,22 @@ window.changeQty = function(index, direction) {
 function setupCheckoutButton() {
     const checkoutBtn = document.querySelector('.checkout-btn');
     if (checkoutBtn) {
-        checkoutBtn.addEventListener('click', () => {
-            if (cartData.length === 0) {
-                alert("আপনার কার্টটি খালি! অনুগ্রহ করে চেকআউট করার আগে কিছু গাছ যোগ করুন।");
-            } else {
-                // এখানে আপনার তৈরি করা চেকআউট পেজের নাম (যেমন: checkout.html) দিন
-                window.location.href = "checkout.html";
-            }
-        });
+       checkoutBtn.addEventListener('click', () => {
+
+    const isLoggedIn = localStorage.getItem("loggedIn");
+
+    if (!isLoggedIn) {
+        alert("Please login first to continue checkout.");
+        window.location.href = "login.html";
+        return;
+    }
+
+    if (cartData.length === 0) {
+        alert("Your cart is empty! Please add some plants before checkout.");
+    } else {
+        window.location.href = "checkout.html";
+    }
+});
     }
 }
 

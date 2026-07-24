@@ -1,4 +1,4 @@
-// ১. গ্লোবাল ভ্যারিয়েবল
+// 1.global variables
 let products = [];
 let currentCategory = "indoor"; 
 let currentSort = "default";
@@ -6,7 +6,7 @@ let currentSort = "default";
 const productGrid = document.getElementById("product-grid");
 const filterItems = document.querySelectorAll(".filter-item");
 
-// ২. ডাটাবেজ থেকে ডাটা ফেচ করা
+// 2.data fetch from home.json
 async function loadProductsData() {
     try {
         const response = await fetch('home.json');
@@ -18,12 +18,12 @@ async function loadProductsData() {
     }
 }
 
-// ৩. প্রোডাক্ট রেন্ডারিং এবং ফিল্টারিং লজিক
+// 3. render products based on category and sort
 function renderProducts() {
     if (!productGrid) return;
     productGrid.innerHTML = "";
 
-    // ফিল্টারিং: ছোট হাতের অক্ষরে রূপান্তর করে তুলনা
+    // filtering logic based on category
     let filtered = products.filter(p => {
         const cat = (p.category || "").toLowerCase().trim();
         const sub = (p.subCategory || "").toLowerCase().trim();
@@ -31,7 +31,7 @@ function renderProducts() {
         return cat === target || sub === target;
     });
 
-    // সর্টিং লজিক
+    // 
     if (currentSort === "low-high") filtered.sort((a, b) => a.price - b.price);
     else if (currentSort === "high-low") filtered.sort((a, b) => b.price - a.price);
     else if (currentSort === "most-reviewed") filtered.sort((a, b) => (b.reviews || []).length - (a.reviews || []).length);
@@ -64,12 +64,12 @@ function renderProducts() {
     });
 }
 
-// ৪. সর্ট ড্রপডাউন তৈরি
+// 4. Sort dropdown initialization
 function initSortDropdown() {
     const titleContainer = document.getElementById("title-container");
     if (!titleContainer) return;
     
-    // ইতিমধ্যে তৈরি থাকলে যেন ডাবল না হয়
+    // Check if sort dropdown already exists
     if(document.getElementById("price-sort")) return;
 
     const sortWrapper = document.createElement("div");
@@ -91,7 +91,7 @@ function initSortDropdown() {
     });
 }
 
-// ৫. সাইডবার ফিল্টার ইভেন্ট
+// 5. Filter button click handling
 filterItems.forEach(item => {
     item.addEventListener("click", function() {
         filterItems.forEach(i => i.classList.remove("active"));
@@ -101,7 +101,7 @@ filterItems.forEach(item => {
     });
 });
 
-// ৬. মোডাল পপআপ
+// 6. Open product details modal
 window.openProductDetails = function(productId) {
     const product = products.find(p => p.id === productId);
     if (!product) return;
@@ -134,14 +134,36 @@ window.openProductDetails = function(productId) {
 }
 
 window.closeModal = () => document.getElementById("product-modal")?.remove();
-
 window.addToCart = (productId) => {
+
+    const isLoggedIn = localStorage.getItem("loggedIn");
+
+    console.log(isLoggedIn); // Test
+
+    if (isLoggedIn !== "true") {
+        alert("Please login first.");
+        window.location.href = "login.html";
+        return;
+    }
+
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
     let item = cart.find(i => i.id === productId);
-    item ? item.quantity += 1 : cart.push({...products.find(p => p.id === productId), quantity: 1});
+
+    if (item) {
+        item.quantity++;
+    } else {
+        cart.push({
+            ...products.find(p => p.id === productId),
+            quantity: 1
+        });
+    }
+
     localStorage.setItem("cart", JSON.stringify(cart));
+
     alert("Added to cart!");
 }
+
 
 window.addEventListener("DOMContentLoaded", () => {
     initSortDropdown();

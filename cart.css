@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /* ==========================================================================
-   ০. বেস রিসেট এবং গ্লোবাল লেআউট
+   0. BASE RESETS & FULL-WIDTH LAYOUT
    ========================================================================== */
 * {
   margin: 0;
@@ -15,7 +15,7 @@ body {
   color: #2b3a30;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* ফুটারকে সবসময় নিচে ধরে রাখবে */
+  min-height: 100vh; 
 }
 
 .container {
@@ -25,7 +25,7 @@ body {
 }
 
 /* ==========================================================================
-   ১. আপনার অরিজিনাল হেডার (NAVBAR) স্টাইল
+   1.header styles
    ========================================================================== */
 header {
   display: flex;
@@ -81,7 +81,7 @@ nav a.active {
 }
 
 /* ==========================================================================
-   ২. ক্যাটাগরি পেজের টাইটেল এবং সাইডবার লেআউট
+  2.title and ctegory page sort dropdown
    ========================================================================== */
 .page-title-section {
   background-color: #ffffff;
@@ -107,7 +107,7 @@ nav a.active {
   font-size: 15px;
 }
 
-/* ক্যাটাগরি মেইন গ্রিড */
+/*category main grid */
 .main-container {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -120,7 +120,7 @@ nav a.active {
   flex: 1; 
 }
 
-/* সাইডবার */
+/*sidebar */
 .sidebar {
   background-color: #ffffff;
   padding: 20px;
@@ -160,7 +160,7 @@ nav a.active {
   font-weight: 600;
 }
 
-/* প্রোডাক্ট গ্রিড (পাশাপাশি ৩টি করে বসবে) */
+/*product grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -222,7 +222,7 @@ nav a.active {
 }
 
 /* ==========================================================================
-   ৩. কার্ট পেজের মেইন লেআউট (IMAGE WhatsApp Image 2026-07-02 at 20.28.57.jpeg)
+   3.image containeer
    ========================================================================== */
 .cart-container {
   max-width: 1200px;
@@ -358,7 +358,7 @@ nav a.active {
   font-size: 14px;
 }
 
-/* অর্ডার সামারি কার্ড */
+/*order summary card*/
 .order-summary-card {
   background-color: #ffffff;
   border-radius: 8px;
@@ -408,13 +408,13 @@ nav a.active {
 }
 
 /* ==========================================================================
-   ৪. আপনার অরিজিনাল বিউটিফুল ফুটার স্টাইল
+   4. FOOTER
    ========================================================================== */
 .beautiful-footer {
   background-color: #2e7d32;
   color: white;
   padding: 50px 8% 20px;
-  margin-top: auto; /* কন্টেন্ট কম হলেও ফুটারকে নিচে রাখবে */
+  margin-top: auto; 
 }
 
 .footer-wrap {
@@ -491,7 +491,7 @@ nav a.active {
   opacity: 0.7;
 }
 
-/* রেসপন্সিভনেস মিডিয়া কোয়েরি */
+/* responsive media query */
 @media (max-width: 992px) {
   .main-container, .cart-wrapper {
     grid-template-columns: 1fr;
